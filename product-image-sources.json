@@ -1,0 +1,627 @@
+[
+  {
+    "id": "1-salicylic-acid-body-wash-100ml",
+    "asset": "product-1-salicylic-acid-body-wash-100ml.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_SABW100ml_4h3alm.jpg?tr=w-600"
+  },
+  {
+    "id": "1-salicylic-acid-body-wash",
+    "asset": "product-1-salicylic-acid-body-wash.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_SABW250ml_h38n6e.jpg?tr=w-600"
+  },
+  {
+    "id": "1-salicylic-acid-body-wash-350ml",
+    "asset": "product-1-salicylic-acid-body-wash-350ml.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_SABW375ml_js8mp8.jpg?tr=w-600"
+  },
+  {
+    "id": "salicylic-acid-body-wash-700",
+    "asset": "product-salicylic-acid-body-wash-700.jpg",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/salicylic-acid-body-wash-700/700ml%20-%20Hero_hldiv6.jpg?tr=w-600"
+  },
+  {
+    "id": "salicylic-ceramide-bodywash",
+    "asset": "product-salicylic-ceramide-bodywash.jpg",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/salicylic-ceramide-bodywash/AppThumbnail_SalicylicCeramideBW%20NEWER%20%281%29_bz4j9m.jpg?tr=w-600"
+  },
+  {
+    "id": "10-aha-body-scrub",
+    "asset": "product-10-aha-body-scrub.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_12_AHAScrub200g_f92y3a.jpg?tr=w-600"
+  },
+  {
+    "id": "10-aha-body-scrub-300",
+    "asset": "product-10-aha-body-scrub-300.jpg",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/10-aha-body-scrub-300/IntroPage%20%282%29_fqiy0x.jpg?tr=w-600"
+  },
+  {
+    "id": "10-magnesium-lotion",
+    "asset": "product-10-magnesium-lotion.jpg",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/10-magnesium-lotion/IntroPage%20copy_4jbk24.jpg?tr=w-600"
+  },
+  {
+    "id": "10-magnesium-lotion-300ml",
+    "asset": "product-10-magnesium-lotion-300ml.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_MagLotion_300ml_iunqab.jpg?tr=w-600"
+  },
+  {
+    "id": "niacinamide-body-lotion",
+    "asset": "product-niacinamide-body-lotion.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_NiaLotion_250ml_3xpl85.jpg?tr=w-600"
+  },
+  {
+    "id": "10-urea-lotion",
+    "asset": "product-10-urea-lotion.jpg",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/10-urea-lotion/1%20%281%29_ayf1b8.jpg?tr=w-600"
+  },
+  {
+    "id": "10-urea-lotion-300ml",
+    "asset": "product-10-urea-lotion-300ml.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_UreaLotion300ml_hfkpjk.jpg?tr=w-600"
+  },
+  {
+    "id": "12-aha-scrub",
+    "asset": "product-12-aha-scrub.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_12_AHAScrub_7qciqc.jpg?tr=w-600"
+  },
+  {
+    "id": "2-aha-body-wash",
+    "asset": "product-2-aha-body-wash.jpg",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/2-aha-body-wash/Artboard%201%20%2825%29_keg73m.jpg?tr=w-600"
+  },
+  {
+    "id": "aha-body-wash-deal",
+    "asset": "product-aha-body-wash-deal.jpg",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/2-aha-body-wash/Artboard%201%20%2825%29_keg73m.jpg?tr=w-600"
+  },
+  {
+    "id": "2-5-benzoyl-peroxide-bodywash",
+    "asset": "product-2-5-benzoyl-peroxide-bodywash.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_BenzPBW_3o13rw.jpg?tr=w-600"
+  },
+  {
+    "id": "20-urea-roll-on-50ml",
+    "asset": "product-20-urea-roll-on-50ml.png",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/20-urea-roll-on-50ml/Artboard%201_f0ixpk.png?tr=w-600"
+  },
+  {
+    "id": "20-urea-roll-on-75ml",
+    "asset": "product-20-urea-roll-on-75ml.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_UFRO75ml_8tcspk.jpg?tr=w-600"
+  },
+  {
+    "id": "20-urea-lotion-xp",
+    "asset": "product-20-urea-lotion-xp.jpg",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/20-urea-lotion-xp/AppThumbnail_20%25UreaLotion300ml_4nhfot.jpg?tr=w-600"
+  },
+  {
+    "id": "30-urea-foot-roll-on",
+    "asset": "product-30-urea-foot-roll-on.png",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/30-urea-foot-roll-on/image%20%2853%29_ic4tyd.png?tr=w-600"
+  },
+  {
+    "id": "30-urea-foot-roll-on-75ml",
+    "asset": "product-30-urea-foot-roll-on-75ml.jpg",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/30-urea-foot-roll-on-75ml/Slide%201%20%281%29_b33d6o.jpg?tr=w-600"
+  },
+  {
+    "id": "4-aha-bha-underarm-roll-on-aqua",
+    "asset": "product-4-aha-bha-underarm-roll-on-aqua.jpg",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/4-aha-bha-underarm-roll-on-aqua/IntroPage%20copy-1_mnxlga.jpg?tr=w-600"
+  },
+  {
+    "id": "4-aha-bha-underarm-roll-on",
+    "asset": "product-4-aha-bha-underarm-roll-on.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_UARO_Flora_a3aoe4.jpg?tr=w-600"
+  },
+  {
+    "id": "4-aha-bha-underarm-roll-on-no-fragrance",
+    "asset": "product-4-aha-bha-underarm-roll-on-no-fragrance.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_UARO_FF_3u8hbl.jpg?tr=w-600"
+  },
+  {
+    "id": "4-aha-bha-underarm-roll-on-oudh",
+    "asset": "product-4-aha-bha-underarm-roll-on-oudh.jpg",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/4-aha-bha-underarm-roll-on-oudh/IntroPage-1_924h1g.jpg?tr=w-600"
+  },
+  {
+    "id": "4-aha-bha-underarm-roll-on-watermelon",
+    "asset": "product-4-aha-bha-underarm-roll-on-watermelon.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_UARO_Watermelon_61ripo.jpg?tr=w-600"
+  },
+  {
+    "id": "4-aha-bha-underarm-rollon-75",
+    "asset": "product-4-aha-bha-underarm-rollon-75.jpg",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/4-aha-bha-underarm-rollon-75/IntroPage%20copy-2_hlfdvp.jpg?tr=w-600"
+  },
+  {
+    "id": "4-aha-bha-underarm-rollon-frag-free-75",
+    "asset": "product-4-aha-bha-underarm-rollon-frag-free-75.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_UARO_FF_75ml_er6o2a.jpg?tr=w-600"
+  },
+  {
+    "id": "5-aha-bha-bodywash-700ml",
+    "asset": "product-5-aha-bha-bodywash-700ml.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_EBW700ml_1_i2qf6p.jpg?tr=w-600"
+  },
+  {
+    "id": "5-aha-bha-bodywash",
+    "asset": "product-5-aha-bha-bodywash.png",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/5-aha-bha-bodywash/Hero%20copy%202_bnhy07.png?tr=w-600"
+  },
+  {
+    "id": "5-aha-bha-bodywash-250ml-flora",
+    "asset": "product-5-aha-bha-bodywash-250ml-flora.png",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/5-aha-bha-bodywash-250ml-flora/Hero_250ml_9wlbpt.png?tr=w-600"
+  },
+  {
+    "id": "5-aha-bha-bodywash-700ml-flora",
+    "asset": "product-5-aha-bha-bodywash-700ml-flora.png",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/5-aha-bha-bodywash-700ml-flora/Hero_700ml_j13i68.png?tr=w-600"
+  },
+  {
+    "id": "5-lactic-acid-body-lotion",
+    "asset": "product-5-lactic-acid-body-lotion.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_LacticLotion_3huwy8.jpg?tr=w-600"
+  },
+  {
+    "id": "5-niacinamide-body-wash",
+    "asset": "product-5-niacinamide-body-wash.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_NiaBW250ml_lcdeap.jpg?tr=w-600"
+  },
+  {
+    "id": "niacinamide-body-wash-700",
+    "asset": "product-niacinamide-body-wash-700.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_NiaBW700ml_j5lf1i.jpg?tr=w-600"
+  },
+  {
+    "id": "6-aha-bha-underarm-roll-on-aqua",
+    "asset": "product-6-aha-bha-underarm-roll-on-aqua.jpg",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/6-aha-bha-underarm-roll-on-aqua/IntroPage%20copy%202-2_g73lii.jpg?tr=w-600"
+  },
+  {
+    "id": "6-aha-bha-underarm-roll-on-frag-free",
+    "asset": "product-6-aha-bha-underarm-roll-on-frag-free.png",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/6-aha-bha-underarm-roll-on-frag-free/Slide%201%20%281%29_3pks9t.png?tr=w-600"
+  },
+  {
+    "id": "6-aha-bha-underarm-roll-on-watermelon",
+    "asset": "product-6-aha-bha-underarm-roll-on-watermelon.png",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/6-aha-bha-underarm-roll-on-watermelon/Slide%201%20%282%29_erof14.png?tr=w-600"
+  },
+  {
+    "id": "6-aha-bha-underarm-roll-on",
+    "asset": "product-6-aha-bha-underarm-roll-on.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_6_UARO_Flora_kihum2.jpg?tr=w-600"
+  },
+  {
+    "id": "6-aha-bha-underarm-roll-on-aqua-75ml",
+    "asset": "product-6-aha-bha-underarm-roll-on-aqua-75ml.png",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/6-aha-bha-underarm-roll-on-aqua-75ml/Slide%201_aa557b.png?tr=w-600"
+  },
+  {
+    "id": "6-aha-bha-underarm-roll-on-flora-75ml",
+    "asset": "product-6-aha-bha-underarm-roll-on-flora-75ml.jpg",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/6-aha-bha-underarm-roll-on-flora-75ml/AppThumbnail_6%25UARO_Flora_75ml_9u2iwy.jpg?tr=w-600"
+  },
+  {
+    "id": "glycolic-acid-stick",
+    "asset": "product-glycolic-acid-stick.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_GlycolicStick_510b8q.jpg?tr=w-600"
+  },
+  {
+    "id": "aha-bha-body-pack",
+    "asset": "product-aha-bha-body-pack.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_AHABHABodyPackblend_7tkx54.jpg?tr=w-600"
+  },
+  {
+    "id": "advanced-underarm-pigmentation-kit",
+    "asset": "product-advanced-underarm-pigmentation-kit.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_APRK_91ljnf.jpg?tr=w-600"
+  },
+  {
+    "id": "anti-stretch-mark-roll-on",
+    "asset": "product-anti-stretch-mark-roll-on.jpg",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/anti-stretch-mark-roll-on/IMG_8119_7296bd.jpg?tr=w-600"
+  },
+  {
+    "id": "body-care-mini-pack",
+    "asset": "product-body-care-mini-pack.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_BodyCareMiniPack_3pzf3t.jpg?tr=w-600"
+  },
+  {
+    "id": "body-exfoliation-pigmentation-kit",
+    "asset": "product-body-exfoliation-pigmentation-kit.png",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/body-exfoliation-pigmentation-kit/Artboard-1-%283%29_b8hg59.png?tr=w-600"
+  },
+  {
+    "id": "daily-hydration-kit",
+    "asset": "product-daily-hydration-kit.jpg",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/daily-hydration-kit/AppThumbnail_10%25UreaLotion300ml_TripleMilk_bv9w5v.jpg?tr=w-600"
+  },
+  {
+    "id": "body-de-tan-kit",
+    "asset": "product-body-de-tan-kit.jpg",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/body-de-tan-kit/AppThumbnail_EBW_SPF_700ml_g5bvm5.jpg?tr=w-600"
+  },
+  {
+    "id": "body-sunscreen-lotion-with-spf-50",
+    "asset": "product-body-sunscreen-lotion-with-spf-50.png",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/body-sunscreen-lotion-with-spf-50/AppThumbnail_DeTan_SPF50_Lotion%20%281%29_lne86c.png?tr=w-600"
+  },
+  {
+    "id": "face-and-body-acne-kit",
+    "asset": "product-face-and-body-acne-kit.png",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/face-and-body-acne-kit/Hero%20%288%29_4w9w68.png?tr=w-600"
+  },
+  {
+    "id": "pigmentation-repair-cream",
+    "asset": "product-pigmentation-repair-cream.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_PRC_eilf4y.jpg?tr=w-600"
+  },
+  {
+    "id": "sabodywash-scrub",
+    "asset": "product-sabodywash-scrub.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_StrawberrySkinExfoKit_4pf31a.jpg?tr=w-600"
+  },
+  {
+    "id": "strawberry-skin-kit",
+    "asset": "product-strawberry-skin-kit.png",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/strawberry-skin-kit/Artboard%201%20%281%29_dq61fa.png?tr=w-600"
+  },
+  {
+    "id": "strawberry-skin-pack",
+    "asset": "product-strawberry-skin-pack.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_StrawberySkinPack_f5nd3y.jpg?tr=w-600"
+  },
+  {
+    "id": "sun-care-duo-head-to-toe",
+    "asset": "product-sun-care-duo-head-to-toe.png",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_SPF_ULSS%20%281%29_cv0igh.png?tr=w-600"
+  },
+  {
+    "id": "triple-milk-deep-hydrating-bodywash",
+    "asset": "product-triple-milk-deep-hydrating-bodywash.jpg",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/triple-milk-deep-hydrating-bodywash/AppThumbnail_TripleMilkDeepHydrating_BW_hwyvut.jpg?tr=w-600"
+  },
+  {
+    "id": "triple-milk-deep-hydrating-bodywash-xp",
+    "asset": "product-triple-milk-deep-hydrating-bodywash-xp.jpg",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/triple-milk-deep-hydrating-bodywash/AppThumbnail_TripleMilkDeepHydrating_BW_hwyvut.jpg?tr=w-600"
+  },
+  {
+    "id": "underarm-pigmentation-kit-no-fragrance",
+    "asset": "product-underarm-pigmentation-kit-no-fragrance.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_PRK_FF_7y6t15.jpg?tr=w-600"
+  },
+  {
+    "id": "6-aha-bha-underarm-roll-on-twin-pack-75ml",
+    "asset": "product-6-aha-bha-underarm-roll-on-twin-pack-75ml.jpg",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/6-aha-bha-underarm-roll-on-twin-pack-75ml/Slide%201%20%282%29_1fq8u0.jpg?tr=w-600"
+  },
+  {
+    "id": "advanced-urea-skin-heel-repair-kit-50ml",
+    "asset": "product-advanced-urea-skin-heel-repair-kit-50ml.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_UreaKit_ce00s9.jpg?tr=w-600"
+  },
+  {
+    "id": "urea-skin-heel-repair-kit",
+    "asset": "product-urea-skin-heel-repair-kit.jpg",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/urea-skin-heel-repair-kit/1%20%283%29_6xkbpt.jpg?tr=w-600"
+  },
+  {
+    "id": "urea-skin-heel-repair-kit-75ml",
+    "asset": "product-urea-skin-heel-repair-kit-75ml.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_UreaKit75ml_elxhr6.jpg?tr=w-600"
+  },
+  {
+    "id": "1-peptide-ceramide-moisturizer",
+    "asset": "product-1-peptide-ceramide-moisturizer.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_PeptideMoisturizer_8u63h3.jpg?tr=w-600"
+  },
+  {
+    "id": "acne-control-wash",
+    "asset": "product-acne-control-wash.jpeg",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/acne-control-wash/AppThumbnail_1SalicylicAcid_FaceWash_Foam.blend%20%281%29_eyicuh.jpeg?tr=w-600"
+  },
+  {
+    "id": "salicylic-acid-face-wash",
+    "asset": "product-salicylic-acid-face-wash.png",
+    "source": "https://i.mscwlns.co/media/misc/pdp/salicylic-acid-face-wash/1SAFW_UBHYBP7yM.png?tr=w-600"
+  },
+  {
+    "id": "2-salicylic-acid-face-wash",
+    "asset": "product-2-salicylic-acid-face-wash.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_SAFW_4uzp3w.jpg?tr=w-600"
+  },
+  {
+    "id": "acne-spot-correction",
+    "asset": "product-acne-spot-correction.png",
+    "source": "https://i.mscwlns.co/mosaic-wellness/image/upload/v1648210350/staging/products/acne-spot-correction/0_2SAG/CAROUSEL/0_2.png?tr=w-800"
+  },
+  {
+    "id": "benzoyl-peroxide-facewash",
+    "asset": "product-benzoyl-peroxide-facewash.png",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_BenzPFW%20%281%29_fmfhn3.png?tr=w-600"
+  },
+  {
+    "id": "brow-lash-serum",
+    "asset": "product-brow-lash-serum.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_Brow%26LashSerum_2p1r87.jpg?tr=w-600"
+  },
+  {
+    "id": "collagen-skin-gummies",
+    "asset": "product-collagen-skin-gummies.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_Collagen60_g14mdy.jpg?tr=w-600"
+  },
+  {
+    "id": "face-razor-for-women",
+    "asset": "product-face-razor-for-women.png",
+    "source": "https://i.mscwlns.co/mosaic-wellness/image/upload/v1649680703/staging/products/face-razor-for-women/CAROUSEL/0.png?tr=w-800"
+  },
+  {
+    "id": "glutathione-gummies-60",
+    "asset": "product-glutathione-gummies-60.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_Gluta60_ks7x96.jpg?tr=w-600"
+  },
+  {
+    "id": "hydrocolloid-acne-pimple-patch",
+    "asset": "product-hydrocolloid-acne-pimple-patch.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_AcnePack_hszowj.jpg?tr=w-600"
+  },
+  {
+    "id": "ice-roller",
+    "asset": "product-ice-roller.jpg",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/ice-roller/AppThumbnail_IceRoller_c2qp5f.jpg?tr=w-600"
+  },
+  {
+    "id": "1-ketoconazole-dandruff-shampoo-250ml",
+    "asset": "product-1-ketoconazole-dandruff-shampoo-250ml.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_KetoShampoo_Big_fyk2qa.jpg?tr=w-600"
+  },
+  {
+    "id": "1-ketoconazole-dandruff-shampoo-150ml",
+    "asset": "product-1-ketoconazole-dandruff-shampoo-150ml.jpg",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/1-ketoconazole-dandruff-shampoo-150ml/Intro_375ml_ltay0r.jpg?tr=w-600"
+  },
+  {
+    "id": "1-zpto-anti-dandruff-shampoo",
+    "asset": "product-1-zpto-anti-dandruff-shampoo.jpg",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/1-zpto-anti-dandruff-shampoo/AppThumbnail_ZPTO_Shampoo_fuuj4l.jpg?tr=w-600"
+  },
+  {
+    "id": "advanced-hair-growth-pack",
+    "asset": "product-advanced-hair-growth-pack.jpg",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/hair-pro-growth-pack/IntroPage%20copy_gcnjwp.jpg?tr=w-500,c-at_max"
+  },
+  {
+    "id": "advanced-hair-growth-pack-xp",
+    "asset": "product-advanced-hair-growth-pack-xp.jpg",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/hair-pro-growth-pack/IntroPage%20copy_gcnjwp.jpg?tr=w-500,c-at_max"
+  },
+  {
+    "id": "hair-growth-pack-30ml-xp",
+    "asset": "product-hair-growth-pack-30ml-xp.jpg",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/hair-growth-pack-30ml-xp/HG30%2BHGSerum%20Hero%20Image_kpovy4.jpg?tr=w-600"
+  },
+  {
+    "id": "hair-growth-pack-rosemary-roll-on-90n",
+    "asset": "product-hair-growth-pack-rosemary-roll-on-90n.jpg",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/hair-growth-pack-rosemary-roll-on-90n/2000x1500%201_3ciqw4.jpg?tr=w-600"
+  },
+  {
+    "id": "hair-growth-pack-rosemary-roll-on-xp-2",
+    "asset": "product-hair-growth-pack-rosemary-roll-on-xp-2.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_HGP_6ebs2q.jpg?tr=w-600"
+  },
+  {
+    "id": "hair-growth-serum-roll-on-50ml",
+    "asset": "product-hair-growth-serum-roll-on-50ml.jpg",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/hair-growth-serum-roll-on-50ml/hairgrowth%20roll%20on%20%281%29_sj865x.jpg?tr=w-600"
+  },
+  {
+    "id": "advanced-hair-growth-serum",
+    "asset": "product-advanced-hair-growth-serum.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_HGS_2t15fy.jpg?tr=w-600"
+  },
+  {
+    "id": "hair-growth-serum-roll-on",
+    "asset": "product-hair-growth-serum-roll-on.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_HGRO_b9ytvj.jpg?tr=w-600"
+  },
+  {
+    "id": "advanced-hair-growth-serum-30ml",
+    "asset": "product-advanced-hair-growth-serum-30ml.png",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/advanced-hair-growth-serum-30ml/AppThumbnail_HGS%20%281%29_4xwvd0.png?tr=w-600"
+  },
+  {
+    "id": "hair-growth-serum-30ml-xp-1",
+    "asset": "product-hair-growth-serum-30ml-xp-1.jpg",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/hair-growth-serum-30ml-xp-1/HGSerum%20Hero%20Image_ii7hes.jpg?tr=w-600"
+  },
+  {
+    "id": "hair-growth-serum-roll-on-2-months-xp",
+    "asset": "product-hair-growth-serum-roll-on-2-months-xp.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_HGRO_2x_g06nz5.jpg?tr=w-600"
+  },
+  {
+    "id": "hair-growth-serum-pp-roll-on",
+    "asset": "product-hair-growth-serum-pp-roll-on.jpg",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/hair-growth-serum-pp-roll-on/IntroPage_2xhv3y.jpg?tr=w-600"
+  },
+  {
+    "id": "keratin-shampoo-with-roll-on",
+    "asset": "product-keratin-shampoo-with-roll-on.png",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/keratin-shampoo-with-roll-on/Hero%20%287%29_28wmac.png?tr=w-600"
+  },
+  {
+    "id": "1-zpto-ads-hg30-kit",
+    "asset": "product-1-zpto-ads-hg30-kit.jpg",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/1-zpto-ads-hg30-kit/AppThumbnail_ZPTO_HG30_ap7gv5.jpg?tr=w-600"
+  },
+  {
+    "id": "anti-dandruff-serum",
+    "asset": "product-anti-dandruff-serum.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_AntiDandruffSerum_cxhczj.jpg?tr=w-600"
+  },
+  {
+    "id": "biotin-hair-gummies-120",
+    "asset": "product-biotin-hair-gummies-120.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_HG120_le5uzo.jpg?tr=w-600"
+  },
+  {
+    "id": "hair-health-gummies",
+    "asset": "product-hair-health-gummies.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_HG30_kmcln5.jpg?tr=w-600"
+  },
+  {
+    "id": "biotin-multivitamin-hair-gummies-2m",
+    "asset": "product-biotin-multivitamin-hair-gummies-2m.jpg",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/biotin-multivitamin-hair-gummies-2m/Hero-1%20%281%29_d2z0br.jpg?tr=w-600"
+  },
+  {
+    "id": "hair-health-gummies-pack-3",
+    "asset": "product-hair-health-gummies-pack-3.jpg",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/hair-health-gummies-pack-3/Hero%20%289%29_cssnle.jpg?tr=w-600"
+  },
+  {
+    "id": "dandruff-and-hairfall-kit",
+    "asset": "product-dandruff-and-hairfall-kit.jpg",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/dandruff-and-hairfall-kit/AppThumbnail_Keto_HG30_26nyvl.jpg?tr=w-600"
+  },
+  {
+    "id": "folli-advanced-plus-hair-growth-serum",
+    "asset": "product-folli-advanced-plus-hair-growth-serum.jpg",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/folli-advanced-plus-hair-growth-serum/AppThumbnail_Folli_HGRO%20%282%29_a25jr5.jpg?tr=w-600"
+  },
+  {
+    "id": "hair-fall-control-mini",
+    "asset": "product-hair-fall-control-mini.png",
+    "source": "https://i.mscwlns.co/mosaic-wellness/image/upload/v1660198995/staging/products/buying-options/Hair%20fall%20Control%20Mini/New%20Carousel_11Aug/01.png?tr=w-800"
+  },
+  {
+    "id": "hair-pro-growth-pack",
+    "asset": "product-hair-pro-growth-pack.jpg",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/hair-pro-growth-pack/Artboard%205%20%2811%29_e6la0r.jpg?tr=w-600"
+  },
+  {
+    "id": "hair-growth-serum-spray",
+    "asset": "product-hair-growth-serum-spray.png",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/hair-growth-serum-spray/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2004_17_12%20PM_6s2zpw.png?tr=w-600"
+  },
+  {
+    "id": "biotin-hair-gummies-breastfeeding-moms-30n-xp",
+    "asset": "product-biotin-hair-gummies-breastfeeding-moms-30n-xp.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_HG30_d1ffzy.jpg?tr=w-600"
+  },
+  {
+    "id": "hair-strengthening-serum",
+    "asset": "product-hair-strengthening-serum.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_HairStrenghteningSerum_100ml_3nh8dn.jpg?tr=w-600"
+  },
+  {
+    "id": "hair-strengthening-serum-50-ml",
+    "asset": "product-hair-strengthening-serum-50-ml.jpg",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/hair-strengthening-serum-50-ml/PDP%20hair%20serum%20%281%29_5rllxt.jpg?tr=w-600"
+  },
+  {
+    "id": "intense-dandruff-kit",
+    "asset": "product-intense-dandruff-kit.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_IntenseDandruffKit_1jcmwd.jpg?tr=w-600"
+  },
+  {
+    "id": "deep-moisturizing-conditioner",
+    "asset": "product-deep-moisturizing-conditioner.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_KeratinConditioner_7tmjzz.jpg?tr=w-600"
+  },
+  {
+    "id": "hair-fall-control-shampoo",
+    "asset": "product-hair-fall-control-shampoo.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_KerShampoo_kfz6tt.jpg?tr=w-600"
+  },
+  {
+    "id": "scalp-massager",
+    "asset": "product-scalp-massager.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_ScalpMassager_doqere.jpg?tr=w-600"
+  },
+  {
+    "id": "anti-stress-hairfall-kit",
+    "asset": "product-anti-stress-hairfall-kit.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_StressHair_673aiq.jpg?tr=w-600"
+  },
+  {
+    "id": "hair-magnesium-gummies-kit-30n",
+    "asset": "product-hair-magnesium-gummies-kit-30n.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_StressHair_673aiq.jpg?tr=w-600"
+  },
+  {
+    "id": "water-hardness-test-strip-sample",
+    "asset": "product-water-hardness-test-strip-sample.jpg",
+    "source": "https://i.mscwlns.co/mosaic-wellness/image/upload/v1647517392/staging/products/water-hardness-test-strip/SAMPLE/WHTSS_Hero.jpg?tr=w-800"
+  },
+  {
+    "id": "calcium-gummies",
+    "asset": "product-calcium-gummies.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_CalG30_3zyiku.jpg?tr=w-600"
+  },
+  {
+    "id": "calcium-gummies-xp",
+    "asset": "product-calcium-gummies-xp.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_CalG30_x2_ac6lo9.jpg?tr=w-600"
+  },
+  {
+    "id": "multivitamin-gummies",
+    "asset": "product-multivitamin-gummies.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_MVG_grjhio.jpg?tr=w-600"
+  },
+  {
+    "id": "advanced-magnesium-gummies-30n",
+    "asset": "product-advanced-magnesium-gummies-30n.jpg",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/magnesium-glycinate-gummies-60n-xp/Artboard%206%20%2824%29_790chy.jpg?tr=w-600"
+  },
+  {
+    "id": "advanced-magnesium-gummies-60n",
+    "asset": "product-advanced-magnesium-gummies-60n.jpg",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/magnesium-glycinate-gummies-60n/Artboard%201%20%28100%29_lt9fr4.jpg?tr=w-600"
+  },
+  {
+    "id": "magnesium-glycinate-gummies-60n",
+    "asset": "product-magnesium-glycinate-gummies-60n.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_MgGummies60N_bbpixy.jpg?tr=w-600"
+  },
+  {
+    "id": "magnesium-gummies-and-lotion-kit",
+    "asset": "product-magnesium-gummies-and-lotion-kit.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_MgKit_1yy5wt.jpg?tr=w-600"
+  },
+  {
+    "id": "body-sunscreen-spray-with-spf-50",
+    "asset": "product-body-sunscreen-spray-with-spf-50.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_BodySunscreenSpray_e9e5jg.jpg?tr=w-600"
+  },
+  {
+    "id": "body-sunscreen-spray-with-spf-50-deal",
+    "asset": "product-body-sunscreen-spray-with-spf-50-deal.jpg",
+    "source": "https://i.mscwlns.co/media/misc/pdp_rcl/body-sunscreen-spray-with-spf-50/Heroine%20image_klm0sb.jpg?tr=w-600"
+  },
+  {
+    "id": "face-body-sunscreen-kit",
+    "asset": "product-face-body-sunscreen-kit.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_SuncareDuo_elz05e.jpg?tr=w-600"
+  },
+  {
+    "id": "lightest-mineral-sunscreen-spf50",
+    "asset": "product-lightest-mineral-sunscreen-spf50.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_MineralSunscreen_h5nhvd.jpg?tr=w-600"
+  },
+  {
+    "id": "summer-essentials-kit",
+    "asset": "product-summer-essentials-kit.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_SuncareTrio%20%281%29_b1o08z.jpg?tr=w-600"
+  },
+  {
+    "id": "ultra-light-sunscreen-spf50",
+    "asset": "product-ultra-light-sunscreen-spf50.jpg",
+    "source": "https://i.mscwlns.co/media/misc/others/AppThumbnail_ULSS_d113wm.jpg?tr=w-600"
+  }
+]

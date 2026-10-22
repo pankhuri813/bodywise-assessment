@@ -41,3 +41,7 @@ After an eligible routine report, users choose an essential starter or an option
 ## Customer product reviews
 
 Kit selection and kit review show short, sourced review excerpts for the exact included product IDs when available. `reviews.js` contains a dated snapshot of customer reviews published on official Bodywise product pages: displayed reviewer name, date, individual rating and source link. No fabricated reviews, verified-buyer badges, kit ratings or assessment testimonials are used. Unsupported products have no substitute review. Excerpts are selected rather than representative, and individual experiences do not establish suitability. Review placement is a conversion hypothesis, not measured uplift. Local validation additionally runs `review.test.cjs` against saved official source records.
+
+## Mobile presentation
+
+Buttons explicitly inherit text colour, with black quiz/options and white selected filter text. Decorative arrows, brand marks and care icons use SVG rather than platform emoji. All 125 official product photos are served as local `product-*` assets, with original URLs retained in `imageSource` and `product-image-sources.json`. Failed photos show a small text fallback instead of a decorative symbol. The local 390px layout is checked before deployment; this is not a direct iPhone Safari test.
