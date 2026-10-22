@@ -1,0 +1,529 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Bodywise — PM case study</title><meta name="description" content="Assessment design, report logic, conversion hypotheses and RICE backlog."><link rel="stylesheet" href="styles.css"></head><body><header class="header"><a class="brand" href="index.html">be<span>bodywise</span><i>✳</i></a><nav><a href="index.html">Open prototype ↗</a></nav></header><main class="case-body"><div class="case-nav"><a class="secondary" href="index.html">← Explore prototype</a><a class="secondary" href="case-study.md" download>Download editable case study ↓</a><button class="secondary" onclick="window.print()">Print / save PDF ↗</button></div><h1>Bodywise: a clearer starting point</h1>
+<p><strong>Product case study · Pankhuri Srivastava · 22 October 2026</strong></p>
+<blockquote>
+<p>Give women a useful next step across Bodywise’s range through a focused, understandable assessment. Earn conversion through relevance and trust. Targets: at least 80% assessment completion and 20% purchase among valid submitters. These are proposed success criteria, not demonstrated results.</p>
+</blockquote>
+<h2>1. What I would deliver</h2>
+<p>A responsive landing page, working assessment, editable answer review and personalised report. The accompanying PM model covers care routing, report structure, commercial plans, measurable hypotheses, experiments and a prioritised backlog. Checkout and real medical services are outside this prototype’s scope.</p>
+<p>The prototype is an independent case-study concept, not an official Bodywise service. It collects no contact details, stores answers only in tab memory, and does not prescribe or sell. Refreshing clears answers. Print/save-to-PDF uses the browser.</p>
+<h2>2. Evidence and limits</h2>
+<p>The supplied Man Matters landing page was accessible with the supplied credentials. Observed structure: strong promise; problem education; a system explained through scan, blood, doctor, plan and tracking; four steps; reassurance; FAQs; repeated assessment CTAs. Its primary CTA opened a “page not available” screen during inspection. The exact reference question sequence could not be verified.</p>
+<p>The supplied ten-page report provides the reference for the output experience. Its sequence is personal summary/stage; estimated drivers; comparison with other users; mechanism education; products mapped to jobs; “You said / What we do / What to change”; clinician and app support; timeline; evidence; monthly plan and FAQ. These are observations of the reference, not independently verified efficacy claims.</p>
+<p>The report also illustrates risks to avoid: a hormonal cause sounds established before clinician confirmation, percentages imply precision that the inputs may not support, and the example says photos were skipped while displaying a section framed around photo-based comparison. The printed distribution shows 4% at the user’s stage and 97% further along, which requires reconciliation. We should preserve explanation and continuity without importing unsupported precision.</p>
+<p>Bodywise’s current navigation groups the catalogue into Hair, Body Care, Health &amp; Fitness, Sun Protection and Face. Periods/PCOS and intimate-care entries also appear on its sitemap/legacy pages, but those listings are not proof of current stock or service availability. In the prototype, these remain clinician-navigation routes. They need catalogue-owner validation before commercial launch. Gummies are a format, not a separate health concern.</p>
+<h2>3. Product decision</h2>
+<p><strong>Cover the range at entry; focus the journey after entry.</strong> A complete catalogue should not require a complete-body questionnaire. Ask for one priority, then show a relevant concern branch and a report that uses the answers. Let users start a second concern later; in production, retain their chosen age/context only with appropriate consent.</p>
+<p>Initial audience assumption: adult women in India arriving from Bodywise campaigns or the site, often on mobile, with an existing concern and uncertainty about what to do next. Traffic intent, language mix, device mix, clinical-routing rate and baseline conversion are unknown. Validate these before forecasting revenue.</p>
+<p>Women’s context should affect suitability rather than serve as a cosmetic rebrand: pregnancy/trying to conceive, postpartum/breastfeeding, medicines and existing conditions, cycle-related questions only when relevant, private wording, and the ability to decline sensitive context. Do not assume that women’s hair loss has the same cause or treatment as men’s hair loss. Do not infer PCOS from acne or irregular periods.</p>
+<h3>What is retained and changed</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Reference pattern</th>
+<th>Bodywise adaptation</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>One hair-loss promise</td>
+<td>One care starting point across the range</td>
+<td>Supports broad entry without promising a whole-body diagnosis</td>
+</tr>
+<tr>
+<td>Scan/blood/doctor system</td>
+<td>Concern/context/summary/appropriate next step</td>
+<td>No invented AI scan, lab result or clinician review</td>
+</tr>
+<tr>
+<td>Personal stage</td>
+<td>Self-reported concern, duration and impact</td>
+<td>Unrelated categories do not share one clinical scale</td>
+</tr>
+<tr>
+<td>Cause percentages</td>
+<td>Known answers, possible influences, unknowns</td>
+<td>Avoids false precision and hormone/deficiency inference</td>
+</tr>
+<tr>
+<td>Each treatment has a job</td>
+<td>Each eligible routine step has a reason</td>
+<td>Makes recommendations understandable and restrained</td>
+</tr>
+<tr>
+<td>Timeline and support</td>
+<td>Category-specific review expectations</td>
+<td>Hair timelines cannot be copied to skin, sleep or periods</td>
+</tr>
+<tr>
+<td>Purchase CTA</td>
+<td>Routine exploration or clinician route</td>
+<td>The right next action differs by suitability</td>
+</tr>
+</tbody></table></div>
+<h2>4. User flow and question design</h2>
+<p><strong>Landing → explanation/acknowledgement → age → priority category → branch concern → duration → impact → relevant context → safety question → current routine → preference → review → submit → report.</strong></p>
+<p>There are nine questions on the usual adult path. Selecting concerning symptoms displays immediate medical-help guidance and shortens the path to seven questions, omitting routine and preference questions. Branch concern options change by category; safety wording changes for period and intimate symptoms. Back and edit preserve answers. Changing the category invalidates the previous concern answer. A short under-18 path produces an age-appropriate next-step summary rather than an adult plan. Production analytics must report this route separately so it cannot disguise poor adult-path completion.</p>
+<p>The acknowledgement explains purpose and local demo handling. A production health-data consent and retention policy must be designed and reviewed before collection. Report access is not conditional on marketing consent or phone verification. An optional save/send feature would come after report value and need separate opt-in.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Question</th>
+<th>Input</th>
+<th>How it changes the experience</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Age band</td>
+<td>Single choice</td>
+<td>Adult path or supported under-18 exit</td>
+</tr>
+<tr>
+<td>Priority</td>
+<td>One of seven routes</td>
+<td>Changes concern choices and report context</td>
+</tr>
+<tr>
+<td>Concern</td>
+<td>Category-specific single choice</td>
+<td>Names the user’s actual priority</td>
+</tr>
+<tr>
+<td>Duration</td>
+<td>Approximate band / not sure</td>
+<td>Appears in summary; helps prepare a care discussion</td>
+</tr>
+<tr>
+<td>Daily impact</td>
+<td>Self-reported mild/moderate/severe</td>
+<td>Severe/disruptive routes to review; not a medical stage</td>
+</tr>
+<tr>
+<td>Life/health context</td>
+<td>Closest match, including prefer not to say</td>
+<td>Pregnancy, postpartum, medicines or unknown context require review</td>
+</tr>
+<tr>
+<td>Safety</td>
+<td>None / listed symptoms / unsure</td>
+<td>Urgent route takes precedence; uncertainty requires review</td>
+</tr>
+<tr>
+<td>Current routine</td>
+<td>None / occasional / consistent / irritation</td>
+<td>Shapes explanation; irritation requires review</td>
+</tr>
+<tr>
+<td>Preference</td>
+<td>Simple / affordable / understand / expert</td>
+<td>Shapes next-step copy; expert choice routes to review</td>
+</tr>
+</tbody></table></div>
+<p>A production context question should allow multiple relevant selections with an exclusive “none” option. The prototype uses one closest match because every non-none answer already blocks automatic product recommendation. This simplification is unsuitable for treatment eligibility or clinician history-taking.</p>
+<h3>Range coverage</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Route</th>
+<th>Concerns available in prototype</th>
+<th>Plan destination</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Hair &amp; scalp</td>
+<td>Shedding, thinning, dandruff, dry/frizzy hair</td>
+<td>Clinical review for shedding/thinning/scalp symptoms; routine exploration for uncomplicated dry/frizzy hair</td>
+</tr>
+<tr>
+<td>Body</td>
+<td>Bumps, dryness, odour, tone, stretch marks</td>
+<td>Eligible everyday care or review based on context/symptoms</td>
+</tr>
+<tr>
+<td>Face</td>
+<td>Breakouts, dryness/sensitivity, marks, fine lines</td>
+<td>Eligible everyday care or dermatologist review</td>
+</tr>
+<tr>
+<td>Sun</td>
+<td>Face, body, outdoor, sensitive-skin format</td>
+<td>Protection routine, with suitability checks</td>
+</tr>
+<tr>
+<td>Health &amp; fitness</td>
+<td>Sleep, energy, nutrition, muscle recovery</td>
+<td>Review for sleep/low energy; other care exploration where appropriate; no automatic supplements</td>
+</tr>
+<tr>
+<td>Period/hormonal concerns</td>
+<td>Irregular periods, discomfort, prior PCOS diagnosis, questions</td>
+<td>Clinician conversation; no quiz-based hormonal diagnosis</td>
+</tr>
+<tr>
+<td>Intimate comfort</td>
+<td>Chafing, urinary symptoms, itching, private advice</td>
+<td>Clinical advice, with prompt-care route for concerning symptoms</td>
+</tr>
+</tbody></table></div>
+<p>The prototype does not yet ask the extra questions needed for SKU-level matching, such as previous reactions, known allergies, current active ingredients or product contraindications. It therefore links only to a category catalogue for everyday-care routes. The safety question is illustrative, not validated clinical triage.</p>
+<h2>5. Report and care-plan model</h2>
+<p>Use the reference’s explanatory spine: <strong>what you said → what it can tell us → what we do next.</strong> Keep the summary visible first; deeper explanation can expand underneath.</p>
+<ol>
+<li><strong>Personal starting point:</strong> priority, concern, duration and impact; date/report version in production. No numerical cause attribution.</li>
+<li><strong>Evidence from answers:</strong> quote the specific answer before interpreting it. Separate self-reported facts from hypotheses and unknowns.</li>
+<li><strong>Meaning and limits:</strong> educational explanation reviewed for the selected concern. Explicitly state when examination or testing could be needed.</li>
+<li><strong>Relevant context:</strong> life stage, medicines, irritation and preferences change the next step. Missing context is not treated as “no risk.”</li>
+<li><strong>A manageable next step:</strong> one essential action, optional additions only when justified, and the reason for each. A non-product action is valid.</li>
+<li><strong>Expectations and review:</strong> category-specific guidance approved by clinicians. No guaranteed result dates or universal six-month timeline.</li>
+<li><strong>Care ownership:</strong> “not reviewed” until actual clinician review; then show the real reviewer, qualifications, registration where applicable, and review timestamp. No placeholder doctor badge.</li>
+<li><strong>Appropriate CTA:</strong> explore an eligible routine, arrange an available consultation, or seek prompt care. Keep the report usable without purchase.</li>
+</ol>
+<h3>Rule precedence and implementation contract</h3>
+<p><strong>Under-18 exclusion → prompt-care symptoms → clinician-review conditions/unknowns → category restrictions → routine eligibility.</strong> Urgent symptoms always override ordinary commercial preferences on adult paths. The under-18 prototype does not collect symptoms and only offers age-appropriate professional guidance.</p>
+<p>Clinician review is required for pregnancy/trying to conceive, postpartum/breastfeeding, medicines/conditions, declined context, uncertain safety answers, severe daily impact, periods/intimate routes, irritation, or a request for an expert. Hair shedding/thinning/dandruff and sleep/low-energy paths also require review in this conservative prototype. No clinical cause is assigned.</p>
+<p>Production rule record: rule ID, rule version, trigger answers, route, approved explanation, allowed product classes, prohibited ingredients/classes, escalation copy, approving clinician and review date. Keep an audit of the rule version that produced each report. Clinical governance is a launch prerequisite; commercial experiments cannot relax clinical eligibility.</p>
+<h3>Three proposed plan paths</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Path</th>
+<th>Structure</th>
+<th>Commercial rule</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Everyday care</td>
+<td>One core product or habit; optional complement; frequency from approved labels</td>
+<td>Display current SKU, pack size, full one-time cost and optional delivery/recurring terms before checkout</td>
+</tr>
+<tr>
+<td>Individual review</td>
+<td>Consultation or external care navigation first; clinician decides tests/treatment</td>
+<td>No condition-specific kit generated before review. Service availability and charges must be confirmed</td>
+</tr>
+<tr>
+<td>Prompt care</td>
+<td>Clear medical-help direction</td>
+<td>No product upsell or checkout distraction</td>
+</tr>
+</tbody></table></div>
+<p>For an eligible dry-body-skin example, the report could propose a gentle cleansing/moisturising foundation, then explain optional product choices. For a period-irregularity example, it should explain what to record for a clinician discussion, without diagnosing PCOS or selling a “hormone balance” fix. For postpartum shedding, contextual review precedes any treatment suggestion.</p>
+<p>SKU matching, when built, must intersect clinical eligibility, concern fit, allergies, existing routine, inventory, price/affordability and user preference. Deduplicate overlapping actives and products. Do not automatically stack face, body and hair bundles. If no suitable SKU is available, preserve useful advice and show an honest no-product outcome. Budget cannot override suitability.</p>
+<h2>6. Define the targets before optimising them</h2>
+<p>Use a stable, privacy-appropriate anonymous first-party identity, deduplicate retries, and exclude internal QA/bots by a preregistered rule. Do not redefine denominators after results arrive.</p>
+<ul>
+<li><strong>Assessment start:</strong> first assessment question successfully rendered after explicit Begin. Track landing CTA click and acknowledgement abandonment separately.</li>
+<li><strong>Valid submission:</strong> required answers accepted and report successfully generated. In production, acceptance should be server-confirmed; an HTTP error is not completion. Repeated submits count once.</li>
+<li><strong>Completion:</strong> unique starters with valid submission within 24 hours / unique starters. Keep all route outcomes in the aggregate and publish adult, under-18, prompt-care and clinician-review breakdowns. Also show landing-CTA-to-submit to expose pre-start friction.</li>
+<li><strong>Purchase:</strong> unique valid submitters making at least one paid, non-test order attributable to the assessment within seven days / all unique valid submitters. Count people, not orders, and do not remove referred users from this denominator. Report gross paid and net-of-cancellations/refunds separately; use net retained purchasers for the business decision.</li>
+<li><strong>Attribution:</strong> first submitted report anchors the seven-day window; connect report ID to checkout/order only with appropriate data handling. Report cross-device/unmatched loss instead of assuming it converted.</li>
+</ul>
+<p>The 20% target assumes “form submitter” means a completed assessment, not a captured phone lead. Confirm this with Kumar/Ayush before interpreting results. If lead capture is required, publish assessment-submit, consented-lead and lead-to-purchase metrics separately. They are different denominators.</p>
+<h3>Illustrative funnel for 1,000 starters</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Step</th>
+<th align="right">Users</th>
+<th align="right">Conditional rate</th>
+<th>What must be true</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Assessment starts</td>
+<td align="right">1,000</td>
+<td align="right">—</td>
+<td>Relevant acquisition mix; question loads successfully</td>
+</tr>
+<tr>
+<td>Priority selected</td>
+<td align="right">980</td>
+<td align="right">98.0%</td>
+<td>Clear categories and easy first interaction</td>
+</tr>
+<tr>
+<td>Concern questions complete</td>
+<td align="right">930</td>
+<td align="right">94.9%</td>
+<td>Relevant wording; no unnecessary long forms</td>
+</tr>
+<tr>
+<td>Context/safety complete</td>
+<td align="right">890</td>
+<td align="right">95.7%</td>
+<td>Sensitive questions explain why; uncertainty has a path</td>
+</tr>
+<tr>
+<td>Routine/preferences complete</td>
+<td align="right">840</td>
+<td align="right">94.4%</td>
+<td>Short screens; back/edit works</td>
+</tr>
+<tr>
+<td>Valid submitted reports</td>
+<td align="right">800</td>
+<td align="right">95.2%</td>
+<td>No mandatory OTP/contact gate; reliable submit</td>
+</tr>
+<tr>
+<td>Eligible for everyday-care path</td>
+<td align="right">600</td>
+<td align="right">75.0% of submitters</td>
+<td>Assumption only; validate actual clinical-routing mix</td>
+</tr>
+<tr>
+<td>Plan viewed</td>
+<td align="right">480</td>
+<td align="right">80.0% of eligible users</td>
+<td>Clear explanation and price; useful next action</td>
+</tr>
+<tr>
+<td>Checkout started</td>
+<td align="right">288</td>
+<td align="right">60.0% of plan viewers</td>
+<td>Suitable stock, manageable plan and total cost</td>
+</tr>
+<tr>
+<td>Retained purchasers</td>
+<td align="right">160</td>
+<td align="right">55.6% of checkout starters</td>
+<td>Reliable payment/fulfilment; limited cancellations</td>
+</tr>
+</tbody></table></div>
+<p>This yields <strong>800/1,000 = 80% completion</strong> and <strong>160/800 = 20% purchase</strong>, or 16% start-to-purchase. The numbers express the assumptions required; they are not a forecast or evidence of feasibility. The 160/600 = 26.7% eligible-submitter purchase requirement is demanding.</p>
+<p>If eligible share is 60% instead of 75%, the required eligible-submitter conversion becomes 33.3%. At 50%, it becomes 40%. The target depends on traffic and suitability mix as well as UX. Clinician-route purchases are conservatively assumed zero in this first model; measure them separately when real services exist. Do not pressure referrals to buy to protect the KPI.</p>
+<h2>7. Hypotheses, levers and experiments</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Hypothesis</th>
+<th>Lever and experiment</th>
+<th>Primary outcome</th>
+<th>Guardrail</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>People leave when the quiz feels irrelevant</td>
+<td>Focused concern routing vs one generic cross-category form</td>
+<td>Start-to-submit, duration, per-question abandonment</td>
+<td>Unanswered suitability questions; report usefulness</td>
+</tr>
+<tr>
+<td>Forced identity capture causes avoidable drop-off</td>
+<td>Report first with optional save vs existing mandatory gate, if a lawful baseline exists</td>
+<td>Completion and seven-day purchase per starter</td>
+<td>Consent quality, lead usefulness; never bundle marketing consent</td>
+</tr>
+<tr>
+<td>Explanations build confidence</td>
+<td>Answer-linked report vs generic recommendation card</td>
+<td>Eligible report-to-plan and purchase per submitter</td>
+<td>Comprehension, inappropriate recommendation complaints</td>
+</tr>
+<tr>
+<td>Large bundles increase hesitation</td>
+<td>One essential step plus optional additions vs full bundle</td>
+<td>Retained purchase per submitter</td>
+<td>Margin per starter, AOV, product suitability</td>
+</tr>
+<tr>
+<td>Unclear costs cause checkout abandonment</td>
+<td>Upfront pack size, total cost and delivery terms vs current presentation</td>
+<td>Checkout-to-retained-purchase</td>
+<td>Complaints, margin, refund/cancellation rate</td>
+</tr>
+<tr>
+<td>Technical friction loses motivated users</td>
+<td>Fast report generation, retry-safe submission, preserved checkout context</td>
+<td>Error-free completion, payment success</td>
+<td>Privacy; duplicate reports/orders</td>
+</tr>
+<tr>
+<td>Some users want help rather than a kit</td>
+<td>Honest clinician route with confirmed service capacity</td>
+<td>Successful care navigation and post-review eligible purchase</td>
+<td>Missed escalation, time-to-contact, no automatic upsell</td>
+</tr>
+</tbody></table></div>
+<p>Avoid fake urgency, invented testimonials, unvalidated social comparisons, shame-driven copy, automatically selected subscriptions and forced phone capture. These are not required to make the conversion case.</p>
+<h3>Measurement and validation plan</h3>
+<p>First run 8–12 moderated sessions across hair, skin/body, wellness and sensitive-concern users, including mobile and lower-bandwidth conditions. Validate category understanding, privacy comprehension and whether users understand that the report is not a diagnosis. This is qualitative research, not evidence of an 80% rate.</p>
+<p>Then establish baseline counts with the same denominators and source/device mix. Instrument: landing_view, assessment_cta_click, acknowledgement_continue, assessment_start, question_view, question_answered, answer_edited, submit_attempt, assessment_submitted, report_view, route_assigned, plan_view, checkout_start, payment_failed, order_paid, order_cancelled/refunded. Include pseudonymous assessment ID, experiment/variant, event ID, timestamp, step ID, technical result and rule version. Do not put raw symptom answers, cycle details or phone numbers in general-purpose analytics. Any route metadata still requires minimisation and access review.</p>
+<p>Report completion by source, device, route, age eligibility and new/returning visitor. Separate technical drop-off from voluntary exit and appropriate care navigation. Use purchase-per-starter as a cross-funnel check so an experiment cannot improve completion by attracting unqualified submits.</p>
+<p>For A/B tests, randomise at the starter/person level, choose one primary metric and predefine the minimum useful effect, confidence level, power, guardrails and stopping rule. As an illustrative sizing check, a 75%→80% completion change needs roughly 1,100 users per arm, and a 15%→20% purchase change roughly 900 submitters per arm at 5% two-sided alpha and 80% power. Recalculate with measured baselines, add allowance for attribution loss, and allow the full seven-day purchase window to mature. Do not run experiments sequentially on the same people without handling carryover.</p>
+<p>A point estimate of 80% or 20% does not establish that the true rate is at least the target. Report uncertainty intervals; agree whether success requires the lower interval bound above the target or an operational point-estimate threshold before launch. Inspect safety incidents immediately regardless of the statistical stopping rule.</p>
+<h2>8. Prioritised backlog</h2>
+<p><strong>Framework:</strong> mandatory safety/data prerequisites first, then RICE. Reach is users exposed per 1,000 assessment starters, Impact is a directional multiplier, Confidence is 0–1, Effort is estimated person-weeks. Score = Reach × Impact × Confidence / Effort. These are explicit planning estimates, to replace after baseline research; they are not measured uplift or additive benefits.</p>
+<h3>Launch prerequisites — complete before conversion experiments</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Item</th>
+<th>Acceptance criteria</th>
+<th>Owner/dependency</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>G1</td>
+<td>Clinical rule governance and catalogue validation</td>
+<td>Approved category/risk rules, pregnancy/medicine restrictions, urgent route, real reviewer status; verify legacy categories and current service availability</td>
+<td>Clinical + catalogue owners</td>
+</tr>
+<tr>
+<td>G2</td>
+<td>Consent, minimal data and security design</td>
+<td>Separate health-data use from marketing, approved retention/deletion, restricted access, no sensitive analytics payloads, shared-device considerations</td>
+<td>Privacy/security + engineering</td>
+</tr>
+<tr>
+<td>G3</td>
+<td>Metric contract and trustworthy event chain</td>
+<td>Stable IDs, deduped accepted submits, report/order attribution, explicit purchase window, test exclusions and route breakdowns</td>
+<td>PM + analytics + engineering</td>
+</tr>
+<tr>
+<td>G4</td>
+<td>Accessible, reliable mobile foundation</td>
+<td>Back/edit, keyboard/screen-reader navigation, no blocking layout defects, recoverable submits, low-bandwidth QA; fulfilment/payment readiness before live sale</td>
+<td>Design + engineering + QA</td>
+</tr>
+</tbody></table></div>
+<h3>RICE order after prerequisites</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Rank / ID</th>
+<th>Backlog item</th>
+<th align="right">Reach</th>
+<th align="right">Impact</th>
+<th align="right">Confidence</th>
+<th align="right">Effort</th>
+<th align="right">Score</th>
+<th>Acceptance and dependency</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1 / B1</td>
+<td>Focused category flow with nine-question adult path</td>
+<td align="right">1000</td>
+<td align="right">2.0</td>
+<td align="right">.80</td>
+<td align="right">2.0</td>
+<td align="right">800</td>
+<td>Every offered category reaches a valid summary; no dead end; needs G1/G4</td>
+</tr>
+<tr>
+<td>2 / B2</td>
+<td>Answer-linked report with honest unknowns</td>
+<td align="right">800</td>
+<td align="right">2.0</td>
+<td align="right">.70</td>
+<td align="right">2.0</td>
+<td align="right">560</td>
+<td>Every interpretation traces to an answer and approved content; needs B1/G1</td>
+</tr>
+<tr>
+<td>3 / B3</td>
+<td>Essential routine, optional additions, upfront total price</td>
+<td align="right">600</td>
+<td align="right">2.0</td>
+<td align="right">.65</td>
+<td align="right">1.5</td>
+<td align="right">520</td>
+<td>Suitable in-stock SKU mapping, no duplicate actives, no preselected recurring charge; needs B2/G1</td>
+</tr>
+<tr>
+<td>4 / B4</td>
+<td>Checkout continuity and payment recovery</td>
+<td align="right">288</td>
+<td align="right">2.0</td>
+<td align="right">.65</td>
+<td align="right">1.0</td>
+<td align="right">374.4</td>
+<td>Selected eligible routine and report attribution survive checkout; payment retries do not duplicate orders; needs B3/G3</td>
+</tr>
+<tr>
+<td>5 / B5</td>
+<td>Mobile performance and failure monitoring</td>
+<td align="right">1000</td>
+<td align="right">.5</td>
+<td align="right">.70</td>
+<td align="right">1.0</td>
+<td align="right">350</td>
+<td>Set and measure latency/error budgets; slow-network submit/report recovery; needs G3/G4</td>
+</tr>
+<tr>
+<td>6 / B6</td>
+<td>Instrumented progress and question-copy experiment</td>
+<td align="right">1000</td>
+<td align="right">.5</td>
+<td align="right">.65</td>
+<td align="right">1.0</td>
+<td align="right">325</td>
+<td>Truthful step count, accessible options, preregistered completion test; needs B1/G3</td>
+</tr>
+<tr>
+<td>7 / B7</td>
+<td>Optional report saving and consented reminders</td>
+<td align="right">800</td>
+<td align="right">.5</td>
+<td align="right">.50</td>
+<td align="right">1.5</td>
+<td align="right">133.3</td>
+<td>Separate opt-in and deletion, no report access gate, privacy-safe reminder text; needs G2/B2</td>
+</tr>
+<tr>
+<td>8 / B8</td>
+<td>Clinician navigation with confirmed capacity</td>
+<td align="right">200</td>
+<td align="right">1.0</td>
+<td align="right">.60</td>
+<td align="right">2.0</td>
+<td align="right">60</td>
+<td>Real appointment/handoff status, clear availability/cost, response SLA; needs G1/G2 and clinical operations</td>
+</tr>
+<tr>
+<td>9 / B9</td>
+<td>Optional second-concern continuation</td>
+<td align="right">240</td>
+<td align="right">.5</td>
+<td align="right">.40</td>
+<td align="right">2.0</td>
+<td align="right">24</td>
+<td>User-triggered only; reconcile plans and repeated actives; needs reliable B1–B4</td>
+</tr>
+</tbody></table></div>
+<p>RICE does not allow delaying safe navigation. The basic clinician/urgent route is mandatory in G1/B1; B8 adds an integrated, staffed booking experience. If baseline data show most users are on clinical routes, revisit this ordering immediately rather than optimising only the shopping cohort.</p>
+<h3>Delivery sequence</h3>
+<p><strong>Phase 1 — validate and establish:</strong> agree target denominators, audit the reference flow when restored, validate catalogue and clinical rules, interview users, finish G1–G4. Deliver the clickable prototype and measurement specification.</p>
+<p><strong>Phase 2 — release a measured core:</strong> implement B1/B2; run an instrumented pilot covering each route. Release commercial routine selection only when B3 and fulfilment/suitability checks pass. The production system needs durable, secure submissions and clinically approved content beyond this local-memory demo.</p>
+<p><strong>Phase 3 — improve purchase:</strong> B3/B4 and observed B5 issues; test report and price levers with a mature seven-day outcome window. Diagnose drop-off rather than run all experiments at once.</p>
+<p><strong>Phase 4 — expand only from evidence:</strong> save/reminder, integrated care navigation and second concerns based on the observed bottleneck and capacity. Review margin and retained conversion alongside acquisition costs and care outcomes.</p>
+<h2>9. Decisions to confirm with Kumar or Ayush</h2>
+<ol>
+<li>Deadline, review format and expected fidelity: structural adaptation or exact visual replica? Can they share a working quiz link or recording?</li>
+<li>Does “form submitter” mean an assessment submission, a verified phone lead or a completed consultation? What purchase window and cancellation treatment are intended?</li>
+<li>What are current start-to-submit, submit-to-paid and paid-to-retained rates by source/device/category? Which acquisition mix is in scope?</li>
+<li>Which catalogue/clinical services are currently supported, including periods and intimate care? Who approves treatment eligibility, safety questions and content?</li>
+<li>Are prices, shipping, stock and clinician capacity fixed constraints? What marketing-consent and data-retention requirements already exist?</li>
+</ol>
+<p>These are clarifications for the PM discussion, not messages sent on your behalf.</p>
+<h2>10. Sources and prototype status</h2>
+<p>Sources consulted 22 October 2026. Catalogue pages establish category coverage, not independent evidence of treatment efficacy.</p>
+<ul>
+<li>Supplied reference landing page: <a href="https://stg.manmatters.com/hair-test">https://stg.manmatters.com/hair-test</a> (authenticated staging; quiz CTA unavailable during inspection).</li>
+<li>Supplied report PDF: stg.manmatters.com_hair-test_report_500140687.pdf (ten pages; kept local, not included in hosted source).</li>
+<li>Bodywise categories: <a href="https://bebodywise.com/">https://bebodywise.com/</a></li>
+<li>Catalogue/format coverage: <a href="https://bebodywise.com/shop/all">https://bebodywise.com/shop/all</a></li>
+<li>Hair range: <a href="https://bebodywise.com/shop/hair">https://bebodywise.com/shop/hair</a></li>
+<li>Face range: <a href="https://bebodywise.com/shop/skin">https://bebodywise.com/shop/skin</a></li>
+<li>Sun protection: <a href="https://bebodywise.com/shop/sun-protection">https://bebodywise.com/shop/sun-protection</a></li>
+<li>Health &amp; fitness: <a href="https://bebodywise.com/shop/nutrition">https://bebodywise.com/shop/nutrition</a></li>
+<li>Legacy category discovery: <a href="https://bebodywise.com/sitemap">https://bebodywise.com/sitemap</a> and <a href="https://bebodywise.com/pcos">https://bebodywise.com/pcos</a> (availability unverified).</li>
+<li>Hair-loss context: American Academy of Dermatology, <a href="https://www.aad.org/public/diseases/hair-loss/causes/18-causes">https://www.aad.org/public/diseases/hair-loss/causes/18-causes</a> — causes vary; symptoms do not justify an automatic hormonal attribution.</li>
+<li>Urinary symptom escalation: NHS, <a href="https://www.nhs.uk/conditions/urinary-tract-infections-utis/">https://www.nhs.uk/conditions/urinary-tract-infections-utis/</a> — clinical-reference input only; production wording and local care pathways need clinician approval.</li>
+<li>Hormonal-condition symptoms and assessment: NHS, <a href="https://www.nhs.uk/conditions/polycystic-ovary-syndrome-pcos/diagnosis/">https://www.nhs.uk/conditions/polycystic-ovary-syndrome-pcos/diagnosis/</a> (redirected on access) — symptoms alone do not establish diagnosis.</li>
+</ul>
+<p><strong>Implemented:</strong> responsive landing, all seven concern routes, nine-question adult flow, under-18 exit, context/safety routing, editable review, dynamic report, print/save, category links, keyboard controls and PM case study.</p>
+<p><strong>Modelled only:</strong> SKU-level eligibility, prices/plan selection, real consultations, identity/consent infrastructure, secure persistence, analytics collection, reminders and checkout. No target conversion rate has been measured.</p>
+</main><footer><p>Independent case-study concept · No measured conversion results.</p></footer></body></html>
