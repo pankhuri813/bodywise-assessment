@@ -2,6 +2,10 @@
 
 Independent case-study prototype by Pankhuri Srivastava. Not an official Bodywise service.
 
+Documentation audited 22 October 2026 against the current source.
+
+**Journey:** landing → acknowledgement → adaptive assessment → editable review → report → eligible kit selection → kit review → external Bodywise store. Consultation-led and urgent outcomes follow their own care routes. Purchase remains external.
+
 ## Current experience
 
 - Landing page with interactive example summaries, a seven-area concern explorer, three-step explanation, doctor-advice section and FAQs.
@@ -22,6 +26,9 @@ GitHub Pages publishes the main branch from repository root.
 - `products.js`, `catalogue-data.js`: sourced snapshot and matching.
 - `products.html`: searchable/filterable catalogue.
 - `styles.css`, `landing.css`: assessment, report and landing presentation.
+- `kits.js`, `kits.css`: explicit kit selection, routine review and presentation.
+- `reviews.js`: source-linked customer product-review excerpts.
+- `product-*` image files and `product-image-sources.json`: site-hosted official photos and provenance.
 - `case-study.md`, `case-study.html`: current PM model, experiments, measurement contract and backlog.
 - `DOCTOR-ROUTING.md`: doctor-link placements, every answer/category trigger and exceptions.
 - `PRODUCT-RESEARCH.md`: source scope and matching limits.
@@ -32,7 +39,7 @@ Automated routing and matching tests run in the local source checkout before dep
 
 Answers exist only in this tab's memory and clear on refresh or restart. Use fictional answers. No diagnosis, AI/photo analysis, lab testing, actual clinician review, appointment booking, checkout, backend submission or live analytics occurs here. Bodywise may require sign-in for its own services. Product prices/availability are dated snapshots. Clinical eligibility and full ingredient/medicine interaction checks require clinical approval before production.
 
-The 80% completion and 20% seven-day attributed-purchase targets remain hypotheses, not observed results. The source PDF, credentials, original hosting identity and private local files are excluded from GitHub uploads.
+The 80% completion and 20% purchase targets remain hypotheses, not observed results. The PM contract uses the original submission as the 168-hour paid-purchase window and a subsequent 30-day cancellation/refund follow-up for the stricter retained-purchaser target; both rates are reported separately. No live attribution or merchant-confirmed purchase measurement exists in this prototype. The source PDF, credentials, original hosting identity and private local files are excluded from GitHub uploads.
 
 ## Personalised care kits
 
@@ -45,3 +52,14 @@ Kit selection and kit review show short, sourced review excerpts for the exact i
 ## Mobile presentation
 
 Buttons explicitly inherit text colour, with black quiz/options and white selected filter text. Decorative arrows, brand marks and care icons use SVG rather than platform emoji. All 125 official product photos are served as local `product-*` assets, with original URLs retained in `imageSource` and `product-image-sources.json`. Failed photos show a small text fallback instead of a decorative symbol. The local 390px layout is checked before deployment; this is not a direct iPhone Safari test.
+
+## Documentation map
+
+- `case-study.md` / `case-study.html` (`dist/` locally): PM rationale, 6–9-question design, kit/review experiments, purchase attribution and provisional RICE backlog.
+- `DOCTOR-ROUTING.md`: all consultation triggers, placements and shopping exclusions; local `dist/` copy stays identical.
+- `PRODUCT-RESEARCH.md`: catalogue eligibility, retail bundles versus personalised selections, review provenance and local photo maintenance.
+- `GITHUB-PAGES.md`: the actual main-branch/root publishing workflow.
+- `GITHUB-DEPLOYMENT.md`: current release status followed by dated historical records. Earlier question counts, test counts and UI descriptions there describe those releases.
+- Local `outputs/.../Bodywise_Product_Catalogue.md`: dated product/use-case research inventory; it is not a live stock or recommendation feed.
+
+Validation currently comprises 27 code checks plus browser checks. Passing tests is not clinical validation or evidence of conversion uplift. Preview fixtures, screenshots, source research caches, credentials and original hosting identity are excluded from uploads.

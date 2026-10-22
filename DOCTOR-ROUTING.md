@@ -64,3 +64,7 @@ This is a question-based prototype. It has no clinical validation, examination, 
 ## Care-kit step
 
 Shopping kits are available only after a complete, valid routine-care assessment with eligible nonclinical individual products. Review-led, discussion-only, urgent, under-18 and uncertain-suitability paths cannot create kits. This feature adds no clinical routing triggers or doctor-link placements.
+
+## Review and mobile updates
+
+Customer product reviews appear only within eligible shopping-kit screens and do not establish suitability or bypass a consultation gate. Local product photos, SVG icons and explicit mobile text colours change presentation only. No new doctor links or clinical triggers were added by these changes. Audited against the current model, matching and kit implementation on 22 October 2026.

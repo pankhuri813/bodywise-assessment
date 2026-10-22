@@ -8,9 +8,9 @@ Matching uses selected concern, facial skin type, broad health/suitability gates
 
 Hair/scalp treatments, supplements, higher-strength urea and benzoyl-peroxide treatments remain discussion-only. Fragrance and pack sizes share a family; only eligible variants are shown in result cards. Cheaper preferences rank displayed pack prices within a family, not cost per ml or treatment strength.
 
-A report shows one starting product, a relevant optional companion where applicable, and expandable alternatives. Kits replace individual choices and are not added to the estimate. Variant links do not change the displayed-pack estimate. Optional companions are chosen in a separate care-kit step with no preselection. The review shows each product’s role, label-based routine and summed pack prices. Alternatives and discussion-only products are excluded from these kits. The selection is not a monthly plan or checkout cart; the official merchant kit builder must be populated manually.
+A report shows one starting product, a relevant optional companion where applicable, and expandable alternatives. Existing merchant kit/bundle listings remain comparison alternatives and are not stacked into personalised selections. The new personalised care-kit step groups eligible individual products; it does not create a new bundle SKU. Variant links do not change the selected displayed-pack total. Optional companions are chosen in a separate care-kit step with no preselection. The review shows each product’s role, label-based routine and summed pack prices. Alternatives and discussion-only products are excluded from these kits. The selection is not a monthly plan or checkout cart; the official merchant kit builder must be populated manually.
 
-Update catalogue-research snapshots and rerun build_site_catalogue.py and render-products.cjs to refresh. Clinical rules need review before a real commercial launch.
+To refresh, update catalogue-research snapshots and run build_site_catalogue.py, then reapply the local-image mapping using product-image-sources.json and download any newly introduced official images before running render-products.cjs. Revalidate review excerpts against refreshed source records; do not overwrite them with unsupported entries. Clinical rules need review before a real commercial launch.
 
 ## Adaptive multi-select flow
 
