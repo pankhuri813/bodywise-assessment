@@ -123,6 +123,38 @@ Use a stable, privacy-appropriate anonymous first-party identity, deduplicate re
 
 The 20% target assumes “form submitter” means a completed assessment, not a captured phone lead. Confirm this with Kumar/Ayush before interpreting results. If lead capture is required, publish assessment-submit, consented-lead and lead-to-purchase metrics separately. They are different denominators.
 
+### Purchase window and attribution contract
+
+**Window:** start at the server-accepted timestamp of a person's first valid assessment submission in the experiment, `submitted_at_utc`. Include orders whose first successful captured payment satisfies `submitted_at_utc <= paid_at_utc < submitted_at_utc + 168 hours`. The window uses elapsed time in UTC, not seven calendar-date labels. An order created in the window but paid outside it does not qualify. A later retry cannot rewrite the first captured-payment timestamp.
+
+**Original assessment:** create an immutable random `assessment_id` and persist the accepted submission in a restricted first-party service. Enrol each known person once per experiment using their earliest accepted submission. Repeated submissions and later concern assessments can have new IDs but must point to the original `cohort_assessment_id`; they cannot restart the clock, reassign the experiment variant or add another person to the denominator. Resolve known identity duplicates using a predeclared deterministic rule and audit revisions. This is a proposed production contract; anonymous people across unlinked devices cannot always be recognised.
+
+**Metric names and denominators:**
+
+| Metric | Numerator | Denominator / reporting rule |
+| --- | --- | --- |
+| Seven-day attributed paid conversion | Unique enrolled submitters with at least one merchant-verified paid, non-test order linked to their original assessment and captured inside the 168-hour window | All unique valid submitters in that enrolment cohort, including clinician-review and no-product outcomes; one person counts once regardless of number of orders |
+| Seven-day attributed retained conversion, 30-day follow-up | Those submitters with at least one qualifying order not fully cancelled or fully refunded within 30 days after payment | Same all-submitter denominator; partial refunds remain a purchaser but reduce reported net revenue. Report partial-refund and return rates separately |
+| Attribution coverage | Relevant merchant orders or purchaser identities that can be deterministically joined to a valid assessment | Report linked and unmatched counts separately, with linkage method and source/device mix. Coverage is a data-quality measure, not conversion |
+
+For consistency with the conservative funnel, the case study's **160/800 = 20% refers to retained purchasers**. Its **178/800 = 22.25% is the seven-day paid rate**. Do not call both rates 20%, compare a paid-only result with the retained target, or treat the retained rate as mature before the follow-up ends. The business must confirm whether the assignment's 20% target means paid or retained conversion before a real experiment; this case study explicitly uses retained conversion as the stricter business ambition.
+
+**Attribution path:** original assessment record → product-link redirect/reference → merchant checkout metadata → order/payment record → reconciliation of cancellations/refunds. Use an opaque signed/validated reference tied to the original assessment; store the verified ID in cart/checkout and order metadata, so it survives later navigation. Do not put symptoms, report contents, contact details or health-category labels in URL parameters or general-purpose analytics. UTMs can describe acquisition but are not proof that an order belongs to an assessment.
+
+**What counts as a verified link:** either the merchant order carries a reference validated against the assessment service, or an authenticated first-party identity match deterministically connects that purchaser to the original assessment under the approved data-use policy. Record which method was used. The assessment cohort remains original-assessment-based even if a later ad, reminder or direct visit closes the purchase; record those marketing touches separately. Do not infer a match solely from a click, timestamp proximity, IP address or similar device fingerprint.
+
+**Cross-device and unmatched orders:** support an authenticated account or explicit saved-report handoff where available and consented. If the person cannot be reliably connected across devices, label the order unmatched and exclude it from the attributed numerator. Keep the submitter in the original denominator; do not discard unmatched users to inflate conversion or assume unmatched orders converted. Report the measured rate as attributable conversion with a disclosed coverage limitation, not a complete measure of all assessment-influenced purchases.
+
+**Payment and duplicate handling:** ingest server-to-server merchant payment/order confirmations, validate the sender, deduplicate event IDs/order IDs, and reconcile against the merchant order ledger. Browser success-page views and outbound product clicks never count as purchases. A repeat buyer can place multiple qualifying orders, but is counted once in the purchaser numerator; each order belongs to only one original assessment cohort under this contract.
+
+**Cohort maturity and late data:** paid conversion is provisional until every included submission has had its full 168 hours plus an agreed ingestion-lag allowance. Retained conversion is provisional until each qualifying order has had its full 30-day follow-up. Publish an as-of timestamp and cohort dates; a retained cohort may require up to 37 days from its final submission, plus ingestion lag. Use merchant event time for eligibility, not webhook arrival time. A late webhook for an in-window payment can update the cohort through the stated backfill policy, with an audit trail; it does not change the purchase window.
+
+**Minimum event/data fields:** `assessment_id`, `cohort_assessment_id`, restricted pseudonymous person/account key where available, `experiment_id`, assigned variant, `submitted_at_utc`, merchant cart/order ID, first captured `paid_at_utc`, payment status, reference validation status/link method, cancellation/refund events, event ID, and ingestion timestamp. Maintain a separate ledger for gross amount, partial/full refunds and net revenue. Scope access and retention to the approved purposes.
+
+**Before accepting the conversion number, QA must demonstrate:** an in-window order links to the original submission; exactly 168 hours is excluded; an order created before the deadline but paid later is excluded; a duplicate webhook and a second order do not add another purchaser; a second quiz does not restart the clock; a verified cross-device match joins correctly; an unmatched order remains unmatched; an in-window late payment event backfills by event time; and a full cancellation/refund removes an otherwise qualifying retained purchaser when no other qualifying retained order remains. Reconcile the attributed numerator to merchant records and publish cohort/sample counts with uncertainty intervals.
+
+**Implementation status:** none of the server-side attribution, merchant webhooks, identity reconciliation or purchase analytics described here exists in the static prototype. The current website provides product links only. This contract must be implemented and verified with Bodywise's merchant/analytics team before claiming measured progress toward the 20% target.
+
 ### Illustrative funnel for 1,000 starters
 
 | Step | Users | Conditional rate | What must be true |
