@@ -60,3 +60,7 @@ An alternative can be marked “Discuss first” while the primary routine remai
 ## Known implementation limits
 
 This is a question-based prototype. It has no clinical validation, examination, full ingredient/medicine interaction engine, clinician-reviewed plan, photo analysis, diagnostic tests, appointment integration or live service availability. A production clinical owner must approve rules and escalation copy. The assessment-start and purchase targets do not override these rules.
+
+## Care-kit step
+
+Shopping kits are available only after a complete, valid routine-care assessment with eligible nonclinical individual products. Review-led, discussion-only, urgent, under-18 and uncertain-suitability paths cannot create kits. This feature adds no clinical routing triggers or doctor-link placements.
