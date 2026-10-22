@@ -22,7 +22,7 @@ Bodywise’s current navigation groups the catalogue into Hair, Body Care, Healt
 
 ## 3. Product decision
 
-**Cover the range at entry; focus the journey after entry.** A complete catalogue should not require a complete-body questionnaire. Ask for one priority, then show a relevant concern branch and a report that uses the answers. Let users start a second concern later; in production, retain their chosen age/context only with appropriate consent.
+**Cover the range at entry; focus the journey after entry.** A complete catalogue should not require a complete-body questionnaire. Ask for one area, allow multiple concerns within it, then show focused follow-ups and a report that uses the selections. The first matched concern sets a small starting routine; secondary concerns inform comparison options rather than stacking products. Let users start another area later; in production, retain their chosen age/context only with appropriate consent.
 
 Initial audience assumption: adult women in India arriving from Bodywise campaigns or the site, often on mobile, with an existing concern and uncertainty about what to do next. Traffic intent, language mix, device mix, clinical-routing rate and baseline conversion are unknown. Validate these before forecasting revenue.
 
@@ -42,47 +42,48 @@ Women’s context should affect suitability rather than serve as a cosmetic rebr
 
 ## 4. User flow and question design
 
-**Landing → explanation/acknowledgement → age → priority category → branch concern → facial skin type (face only) → duration → impact → relevant context → safety question → product suitability → current routine → preference → review → submit → report.**
+**Landing → acknowledgement → age → area → multiple concerns → safety → combined health/product context → relevant follow-ups → preferences where relevant → review → submit → report.**
 
-There are ten questions on the usual adult path and eleven for face care, which also asks skin type. Selecting concerning symptoms displays immediate medical-help guidance and shortens the path before product-fit, routine and preference questions (seven questions, or eight for face care). Branch concern options change by category; safety wording changes for period and intimate symptoms. Back and edit preserve answers. Changing the category invalidates the previous concern answer. A short under-18 path produces an age-appropriate next-step summary rather than an adult plan. Production analytics must report this route separately so it cannot disguise poor adult-path completion.
+The adult flow is adaptive rather than fixed at ten questions. Sun protection has 6 questions; body care has 7; dry/frizzy hair has 7 and clinical hair/scalp concerns have 9; face care has 7, or 8 when breakout/dryness impact is asked; wellness has 8; periods/hormonal and intimate-care navigation have 6. Review and acknowledgement screens are not included in these counts. Selecting multiple concerns can add relevant follow-ups. Urgent symptoms shorten the adult path to the four questions through safety. Under-18 users exit after the age question.
 
-The acknowledgement explains purpose and local demo handling. A production health-data consent and retention policy must be designed and reviewed before collection. Report access is not conditional on marketing consent or phone verification. An optional save/send feature would come after report value and need separate opt-in.
+Concerns, safety, health/product context, relevant detail questions and preferences support multiple selections. Age, area, skin type, duration and impact remain single-select facts. None/private/uncertain choices are exclusive where required. A positive restriction applies globally, even if the first selected concern looks suitable for everyday care. Changing an area or concerns clears stale branch details and severity answers. The review screen makes missing answers visible rather than accepting an incomplete edited branch.
 
-| Question | Input | How it changes the experience |
-| --- | --- | --- |
-| Age band | Single choice | Adult path or supported under-18 exit |
-| Priority | One of seven routes | Changes concern choices and report context |
-| Concern | Category-specific single choice | Names the user’s actual priority |
-| Duration | Approximate band / not sure | Appears in summary; helps prepare a care discussion |
-| Daily impact | Self-reported mild/moderate/severe | Severe/disruptive routes to review; not a medical stage |
-| Life/health context | Closest match, including prefer not to say | Pregnancy, postpartum, medicines or unknown context require review |
-| Safety | None / listed symptoms / unsure | Urgent route takes precedence; uncertainty requires review |
-| Product suitability | No known issues / allergy or irritation / active or prescribed treatments / unsure | Holds product matching when suitability is uncertain |
-| Facial skin type (face only) | Oily / combination / normal / dry / sensitive / unsure | Changes the cleanser match or holds suggestions |
-| Current routine | None / occasional / consistent / irritation | Shapes explanation; irritation requires review |
-| Preference | Simple / affordable / understand / expert | Shapes next-step copy; expert choice routes to review |
+The acknowledgement explains purpose and local handling. Report access does not depend on marketing opt-in or a phone number. The prototype retains answers only in tab memory and clears them on refresh or restart. Production consent, secure persistence and retention are not implemented.
 
-A production context question should allow multiple relevant selections with an exclusive “none” option. The prototype uses one closest match because every non-none answer already blocks automatic product recommendation. This simplification is unsuitable for treatment eligibility or clinician history-taking.
+| Question | Input | Effect |
+|---|---|---|
+| Age | Single band | Adult path or supported under-18 exit |
+| Area | One of seven routes | Selects relevant concern choices |
+| Concerns | Multiple choices | First matched concern sets starting routine; others inform alternatives |
+| Safety | Multiple selections with exclusive none | Urgent symptoms override commercial actions; uncertainty needs review |
+| Health/product context | Multiple selections with exclusive none/private | Combines pregnancy/postpartum/medicine context with allergy, irritation and active-treatment checks |
+| Facial skin type | Single choice, face only | Changes cleanser matching or holds products |
+| Duration | Single approximate band where relevant | Recorded for symptoms and clinician discussion, not inferred on unasked branches |
+| Impact | Single self-reported level where relevant | Disruptive symptoms hold products; not a clinical severity stage |
+| Hair/body details | Multiple relevant observations | Captures symptom context; irritation, scalp discomfort and painful/deep spots can change routing |
+| Preferences | Multiple, except care-navigation-only routes | Affordable pack selection and expert request are both respected |
+
+The generic current-routine question has been removed. Product suitability is included in the combined context question. This reduces unnecessary questions without removing the suitability gate. The adaptive design is implemented, but its completion or purchase uplift has not been measured.
 
 ### Range coverage
 
 | Route | Concerns available in prototype | Plan destination |
 | --- | --- | --- |
 | Hair & scalp | Shedding, thinning, dandruff, dry/frizzy hair | Clinical review for shedding/thinning/scalp symptoms; routine exploration for uncomplicated dry/frizzy hair |
-| Body | Bumps, dryness, odour, tone, stretch marks | Eligible everyday care or review based on context/symptoms |
-| Face | Breakouts, dryness/sensitivity, marks, fine lines | Eligible everyday care or dermatologist review |
+| Body | Bumps, dryness, cracked heels, rough/bumpy skin, odour, tone, stretch marks | Eligible everyday care or review based on context/symptoms |
+| Face | Breakouts, dryness/sensitivity, marks, fine lines, brow/lash appearance, facial hair removal, puffiness | Eligible everyday care or dermatologist review |
 | Sun | Face, body, outdoor, sensitive-skin format | Protection routine, with suitability checks |
-| Health & fitness | Sleep, energy, nutrition, muscle recovery | Review for sleep/low energy; other care exploration where appropriate; no automatic supplements |
+| Health & fitness | Sleep, energy, nutrition, muscle recovery, bone/joint nutrition | Review for sleep, energy, nutrition and bone/joint support; uncomplicated muscle-recovery lotion can remain routine care; no automatic oral supplements |
 | Period/hormonal concerns | Irregular periods, discomfort, prior PCOS diagnosis, questions | Clinician conversation; no quiz-based hormonal diagnosis |
 | Intimate comfort | Chafing, urinary symptoms, itching, private advice | Clinical advice, with prompt-care route for concerning symptoms |
 
-The prototype now asks a broad product-suitability question about allergies, active irritation and current active/prescribed treatments, plus facial skin type. It uses these answers to match a researched catalogue of 125 reachable product listings, including sizes, fragrances and kits. Only 78 current Shop All listings pass metadata/availability checks for matching. Full ingredient-level interaction and contraindication checks are still not implemented; these questions are not a substitute for clinical suitability review. The safety question is illustrative, not validated clinical triage.
+The prototype asks a combined health/product-context question covering allergies, active irritation and current active/prescribed treatments, plus facial skin type where relevant. It uses these answers to match a researched catalogue of 125 reachable product listings, including sizes, fragrances and kits. Only 78 current Shop All listings pass metadata/availability checks for matching. Full ingredient-level interaction and contraindication checks are still not implemented; these questions are not a substitute for clinical suitability review. The safety question is illustrative, not validated clinical triage.
 
 ## 5. Report and care-plan model
 
 Use the reference’s explanatory spine: **what you said → what it can tell us → what we do next.** Keep the summary visible first; deeper explanation can expand underneath.
 
-1. **Personal starting point:** priority, concern, duration and impact; date/report version in production. No numerical cause attribution.
+1. **Personal starting point:** area, selected concerns, and duration/impact only where asked; date/report version in production. No numerical cause attribution.
 2. **Evidence from answers:** quote the specific answer before interpreting it. Separate self-reported facts from hypotheses and unknowns.
 3. **Meaning and limits:** educational explanation reviewed for the selected concern. Explicitly state when examination or testing could be needed.
 4. **Relevant context:** life stage, medicines, irritation and preferences change the next step. Missing context is not treated as “no risk.”
@@ -95,7 +96,7 @@ Use the reference’s explanatory spine: **what you said → what it can tell us
 
 **Under-18 exclusion → prompt-care symptoms → clinician-review conditions/unknowns → category restrictions → routine eligibility.** Urgent symptoms always override ordinary commercial preferences on adult paths. The under-18 prototype does not collect symptoms and only offers age-appropriate professional guidance.
 
-Clinician review is required for pregnancy/trying to conceive, postpartum/breastfeeding, medicines/conditions, declined context, uncertain safety answers, severe daily impact, periods/intimate routes, irritation, or a request for an expert. Hair shedding/thinning/dandruff and sleep/low-energy paths also require review in this conservative prototype. No clinical cause is assigned.
+Clinician review is recommended by the prototype for pregnancy/trying to conceive, postpartum/breastfeeding, medicines/conditions, declined context, uncertain safety, disruptive impact where asked, periods/intimate routes, allergies, active treatments, irritation, fragrance sensitivity, scalp discomfort, painful/deep body spots, sensitive/uncertain facial skin or an expert request. Hair shedding/thinning/dandruff and wellness concerns other than uncomplicated muscle recovery also lead to review. Moderate recurring facial breakouts and primary discussion-only products can produce a consultation-led report even where the base route is otherwise routine. An individual alternative may remain discussion-only without changing an otherwise routine starting product. No clinical cause is assigned. Full answer triggers and interface placements are recorded in [Doctor-routing audit](DOCTOR-ROUTING.md).
 
 Production rule record: rule ID, rule version, trigger answers, route, approved explanation, allowed product classes, prohibited ingredients/classes, escalation copy, approving clinician and review date. Keep an audit of the rule version that produced each report. Clinical governance is a launch prerequisite; commercial experiments cannot relax clinical eligibility.
 
@@ -199,7 +200,7 @@ All numerical trigger points below refer to the illustrative model, not industry
 
 | Experiment / backlog | Funnel stage it targets | Hypothesis and intervention | Evidence to collect | What would change the priority |
 | --- | --- | --- | --- | --- |
-| E1 / B1 + B6: shorter adaptive assessment | Start → valid submission | Move optional routine/preferences after the first report and branch by concern; retain the checks required before showing products. Compare with the current 10–11 question prototype. | Step-level abandonment, time, technical errors, completed suitability checks, report usefulness, purchase per starter. | Prioritise if completion is below the 80% ambition and losses cluster at optional questions while technical errors are low. If losses cluster at failed requests or slow loads, fix B5 first. If a shorter quiz lifts completion but harms suitability, useful recommendations or purchase per starter, do not ship that variant. |
+| E1 / B1 + B6: shorter adaptive assessment | Start → valid submission | Test further shortening of eligible branches against the implemented 6–9-question adaptive flow; retain suitability checks and access to expert advice. The generic routine question is already removed and context checks are combined. | Step-level abandonment, time, technical errors, completed suitability checks, report usefulness, purchase per starter. | Prioritise if completion is below the 80% ambition and losses cluster at optional questions while technical errors are low. If losses cluster at failed requests or slow loads, fix B5 first. If a shorter quiz lifts completion but harms suitability, useful recommendations or purchase per starter, do not ship that variant. |
 | E2 / B2: answer-linked explanation | Eligible report → deliberate plan engagement | Showing why a specific answer led to a product will make the next step understandable. Test the explanation against a concise product-list control. | Plan exposure versus explicit plan engagement, comprehension feedback, source/device mix, downstream purchase per starter. | Prioritise when deliberate engagement is materially below the scenario's 80% and users do not understand the recommendation. If engagement is healthy but checkout is weak, move effort to E3; if recommendations are unsuitable, correct matching before copy experiments. |
 | E3 / B3: essential plan, optional additions and price clarity | Plan engagement → merchant-confirmed checkout | A small starting routine with optional items and clear total/pack sizes may reduce cost uncertainty. Test against the existing plan presentation, using the same eligible SKU pool. | Merchant-confirmed checkout rate, outbound-click-to-checkout loss, item removal, price/delivery feedback, margin per starter. | Prioritise when checkout start is materially below 60%, plan engagement is healthy and cost/routine-size feedback supports the hypothesis. If the main loss is unavailable stock, prioritise inventory/substitution work rather than changing copy. Reject a variant that raises orders but worsens the agreed margin or refund guardrails. |
 | E4 / B4 + B5: checkout continuity and payment recovery | Merchant checkout → confirmed paid purchaser | Preserve selected eligible products and reduce recoverable checkout failures. Known defects are fixes, not conditions to leave broken for an A/B test. | Payment-attempt and failure reasons, device/payment-method split, duplicate orders, successful payment after retry. | Move ahead of E2/E3 if confirmed payment failures or broken redirects explain losses, even when an earlier stage has more absolute exits. If there are few technical failures and users decline the final cost, investigate pricing/trust rather than assuming payment recovery will help. |
@@ -267,7 +268,7 @@ A point estimate of 80% or 20% does not establish that the true rate is at least
 
 | Rank / ID | Backlog item | Reach | Impact | Confidence | Effort | Score | Acceptance and dependency |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | --- |
-| 1 / B1 | Focused category flow with 10–11 question adult path | 1000 | 2.0 | .80 | 2.0 | 800 | Every offered category reaches a valid summary; no dead end; needs G1/G4 |
+| 1 / B1 | Adaptive 6–9-question flow with multiple selections | 1000 | 2.0 | .80 | 2.0 | 800 | Every offered category reaches a valid summary; no dead end; needs G1/G4 |
 | 2 / B2 | Answer-linked report with honest unknowns | 800 | 2.0 | .70 | 2.0 | 560 | Every interpretation traces to an answer and approved content; needs B1/G1 |
 | 3 / B3 | Essential routine, optional additions, upfront total price | 600 | 2.0 | .65 | 1.5 | 520 | Suitable in-stock SKU mapping, no duplicate actives, no preselected recurring charge; needs B2/G1 |
 | 4 / B4 | Checkout continuity and payment recovery | 288 | 2.0 | .65 | 1.0 | 374.4 | Selected eligible routine and report attribution survive checkout; payment retries do not duplicate orders; needs B3/G3 |
@@ -318,9 +319,9 @@ Sources consulted 22 October 2026. Catalogue pages establish category coverage, 
 - Urinary symptom escalation: NHS, https://www.nhs.uk/conditions/urinary-tract-infections-utis/ — clinical-reference input only; production wording and local care pathways need clinician approval.
 - Hormonal-condition symptoms and assessment: NHS, https://www.nhs.uk/conditions/polycystic-ovary-syndrome-pcos/diagnosis/ (redirected on access) — symptoms alone do not establish diagnosis.
 
-**Implemented:** responsive landing, seven concern routes, 10–11 question adult flow, under-18 exit, context/safety/product-suitability routing, editable review, dynamic report, 125-listing sourced catalogue with 78 eligible Shop All listings, concern/skin-type product matching, discussion-only options, optional-product price estimate, product library with filters, print/save, keyboard controls and PM case study.
+**Implemented:** responsive landing, seven concern routes, adaptive 6–9-question adult flow with multiple selections, under-18 exit, context/safety/product-suitability routing, editable review, dynamic report, 125-listing sourced catalogue with 78 eligible Shop All listings, concern/skin-type product matching, discussion-only options, optional-product price estimate, product library with filters, print/save, keyboard controls and PM case study.
 
-**Modelled only:** complete clinical eligibility and ingredient interaction checks, live stock/pricing, real consultations, identity/consent infrastructure, secure persistence, analytics collection, reminders and checkout. No target conversion rate has been measured.
+**Modelled only:** complete clinical eligibility and ingredient interaction checks, live stock/pricing, real consultation delivery or booking integration (only external links are implemented), identity/consent infrastructure, secure persistence, analytics collection, reminders and checkout. No target conversion rate has been measured.
 
 
 ## 11. Product recommendation implementation
@@ -332,3 +333,14 @@ Routine routes show one starting product with optional complementary care where 
 The oily-skin occasional-breakout path selects the 2% face wash, while combination skin selects the 1% option. Dry/normal skin prioritises moisturising rather than assuming an acid cleanser is suitable; sensitive/uncertain skin needs individual review. Current acids, retinoids, prescribed treatments, ingredient allergies or irritation hold automatic suggestions. Supplement and hair/scalp treatment paths can show clearly labelled options for a clinician conversation on otherwise unrestricted paths. Pregnancy, breastfeeding/postpartum, medical/medicine context, uncertain safety, severe symptoms, under-18, periods and intimate-care routes hold product suggestions.
 
 Product photos remain brand assets linked from its image host. Prices are dated snapshots rather than live feeds. Before production, replace the snapshot with maintained catalogue/stock data, complete clinical rules, review the wording and instrument outbound clicks and purchase attribution appropriately.
+
+
+## 12. Landing-page and consultation update
+
+The landing page uses a clear concern-led headline, a labelled interactive example summary, product imagery from the official catalogue, a seven-area concern explorer, a three-step explanation, an optional doctor-advice section and FAQs. This adapts the reference landing page's explanatory progression without claiming AI scans, laboratory testing, clinician-signed reports or fabricated results. Example cards do not represent an actual diagnosis or personalised match until the assessment is completed.
+
+Products replaces PM thinking in customer navigation. The navbar assessment action is a plain text/arrow control without its former outline box. Case-study links remain outside the customer journey; this document is retained for review. The product-listing research notice was removed at the user's request, with individual product sources and availability notes retained.
+
+Doctor links appear in the landing-page advice section, the upper consultation card and final next-step section of review-led reports, every Discuss-first report product/alternative card, and discussion-only library entries. Links open Bodywise's official schedule-appointment route, verified to redirect to its expert listing with sign-in-to-chat controls. They pass no quiz answers or assessment identifiers, make no booking automatically and do not guarantee service availability or charges. Urgent symptoms continue to direct to prompt local care instead of routine online booking. Under-18 users receive supported professional-care guidance without an unverified adult-service referral.
+
+Validation: the existing routing/matching suite covers every concern, adaptive counts, multiple selections, contradictory none/private values, urgent and under-18 exits, cleared stale answers, suitability gates, secondary clinical concerns, family deduplication, estimates and simultaneous expert/affordable preferences. Landing interactions and doctor-link placement are verified in browser before publication. No conversion results are claimed.
