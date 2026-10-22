@@ -118,7 +118,7 @@ Use a stable, privacy-appropriate anonymous first-party identity, deduplicate re
 - **Assessment start:** first assessment question successfully rendered after explicit Begin. Track landing CTA click and acknowledgement abandonment separately.
 - **Valid submission:** required answers accepted and report successfully generated. In production, acceptance should be server-confirmed; an HTTP error is not completion. Repeated submits count once.
 - **Completion:** unique starters with valid submission within 24 hours / unique starters. Keep all route outcomes in the aggregate and publish adult, under-18, prompt-care and clinician-review breakdowns. Also show landing-CTA-to-submit to expose pre-start friction.
-- **Purchase:** unique valid submitters making at least one paid, non-test order attributable to the assessment within seven days / all unique valid submitters. Count people, not orders, and do not remove referred users from this denominator. Report gross paid and net-of-cancellations/refunds separately; use net retained purchasers for the business decision.
+- **Purchase:** unique valid submitters making at least one paid, non-test order attributable to the assessment within seven days / all unique valid submitters. Count people, not orders, and do not remove referred users from this denominator. Report gross paid and net-of-cancellations/refunds separately; use net retained purchasers for the business decision. Proposed maturity rule: an order must be paid within seven days of submission, then observed for 30 days after payment before calling the purchaser retained. Confirm the follow-up horizon with the business before launch; a seven-day paid metric cannot be presented as a mature retained metric.
 - **Attribution:** first submitted report anchors the seven-day window; connect report ID to checkout/order only with appropriate data handling. Report cross-device/unmatched loss instead of assuming it converted.
 
 The 20% target assumes “form submitter” means a completed assessment, not a captured phone lead. Confirm this with Kumar/Ayush before interpreting results. If lead capture is required, publish assessment-submit, consented-lead and lead-to-purchase metrics separately. They are different denominators.
@@ -134,33 +134,83 @@ The 20% target assumes “form submitter” means a completed assessment, not a 
 | Routine/preferences complete | 840 | 94.4% | Short screens; back/edit works |
 | Valid submitted reports | 800 | 95.2% | No mandatory OTP/contact gate; reliable submit |
 | Eligible for everyday-care path | 600 | 75.0% of submitters | Assumption only; validate actual clinical-routing mix |
-| Plan viewed | 480 | 80.0% of eligible users | Clear explanation and price; useful next action |
-| Checkout started | 288 | 60.0% of plan viewers | Suitable stock, manageable plan and total cost |
-| Retained purchasers | 160 | 55.6% of checkout starters | Reliable payment/fulfilment; limited cancellations |
+| Deliberately engaged with plan | 480 | 80.0% of eligible users | Clear explanation and price; useful next action |
+| Checkout started | 288 | 60.0% of plan-engaged users | Suitable stock, manageable plan and total cost |
+| Paid purchasers | 178 | 61.8% of checkout starters | Successful merchant checkout and payment |
+| Retained purchasers | 160 | 89.9% of paid purchasers | Appropriate expectations, fulfilment and limited cancellations/refunds |
 
-This yields **800/1,000 = 80% completion** and **160/800 = 20% purchase**, or 16% start-to-purchase. The numbers express the assumptions required; they are not a forecast or evidence of feasibility. The 160/600 = 26.7% eligible-submitter purchase requirement is demanding.
+This yields **800/1,000 = 80% completion** and **160/800 = 20% purchase**, or 16% start-to-purchase. These are reverse-engineered scenario counts showing what would have to be true to meet the target. They are not observed data, a forecast, an expected uplift or evidence of feasibility. Splitting payment and retention makes it possible to distinguish checkout friction from post-purchase disappointment. The 160/600 = 26.7% eligible-submitter purchase requirement is demanding.
 
 If eligible share is 60% instead of 75%, the required eligible-submitter conversion becomes 33.3%. At 50%, it becomes 40%. The target depends on traffic and suitability mix as well as UX. Clinician-route purchases are conservatively assumed zero in this first model; measure them separately when real services exist. Do not pressure referrals to buy to protect the KPI.
 
-## 7. Hypotheses, levers and experiments
+## 7. How we will test the 20% purchase target
 
-| Hypothesis | Lever and experiment | Primary outcome | Guardrail |
-| --- | --- | --- | --- |
-| People leave when the quiz feels irrelevant | Focused concern routing vs one generic cross-category form | Start-to-submit, duration, per-question abandonment | Unanswered suitability questions; report usefulness |
-| Forced identity capture causes avoidable drop-off | Report first with optional save vs existing mandatory gate, if a lawful baseline exists | Completion and seven-day purchase per starter | Consent quality, lead usefulness; never bundle marketing consent |
-| Explanations build confidence | Answer-linked report vs generic recommendation card | Eligible report-to-plan and purchase per submitter | Comprehension, inappropriate recommendation complaints |
-| Large bundles increase hesitation | One essential step plus optional additions vs full bundle | Retained purchase per submitter | Margin per starter, AOV, product suitability |
-| Unclear costs cause checkout abandonment | Upfront pack size, total cost and delivery terms vs current presentation | Checkout-to-retained-purchase | Complaints, margin, refund/cancellation rate |
-| Technical friction loses motivated users | Fast report generation, retry-safe submission, preserved checkout context | Error-free completion, payment success | Privacy; duplicate reports/orders |
-| Some users want help rather than a kit | Honest clinician route with confirmed service capacity | Successful care navigation and post-review eligible purchase | Missed escalation, time-to-contact, no automatic upsell |
+**The target is an ambition. The funnel is a hypothesis tree. The experiment programme is how we decide whether that ambition is achievable.** There are no observed baseline rates, experiment results or measured uplifts yet. The prototype currently sends users to Bodywise product pages and has no merchant checkout/order integration. An outbound product click is not a checkout start or a purchase. Until merchant events can be joined to assessments with appropriate consent and access, the 20% outcome cannot be measured reliably.
 
-Avoid fake urgency, invented testimonials, unvalidated social comparisons, shame-driven copy, automatically selected subscriptions and forced phone capture. These are not required to make the conversion case.
+For the conservative everyday-care scenario, with clinician-route purchases initially assumed zero:
+
+**Purchase per submitter = eligible share × plan-engagement rate × checkout-start rate × paid rate × retained rate.**
+
+The illustrative requirement is **75% × 80% × 60% × (178/288) × (160/178) = 20%**. Paid and retained rates use the exact scenario counts; displayed table percentages are rounded. These factors identify testable dependencies, not evidence that any factor will reach its assumed value. Appropriate clinical routing is a constraint, not a conversion lever to relax.
+
+### Define each transition so the experiments are interpretable
+
+- **Submission → eligible route:** clinician-approved rules assign eligibility. Record a non-sensitive operational route code under restricted access; do not infer safety from purchase intent.
+- **Eligible report → plan engagement:** the user explicitly opens a “View my routine” control. Log product-section visibility separately as plan_exposure; auto-rendering a card must not count as intentional plan engagement. This is a proposed production measurement contract, not an event currently collected by the prototype.
+- **Plan engagement → checkout start:** the merchant confirms entry to a cart/checkout with a joinable assessment identifier. Product-page outbound clicks remain a distinct intermediate event. Without merchant confirmation, label this stage unmeasured.
+- **Checkout start → paid order:** merchant order/payment confirmation, deduplicated by purchaser and order ID. A redirect to a success page is not sufficient by itself.
+- **Paid → retained purchaser:** reconcile cancellations/refunds at a fixed follow-up horizon. Keep payment failure, cancellation and return reasons separate so different problems do not collapse into “conversion.”
+
+### Experiments, stage evidence and decisions
+
+All numerical trigger points below refer to the illustrative model, not industry benchmarks or validated targets. They flag assumptions to investigate; they do not automatically prove which experiment has the highest return. Compare stable traffic/source cohorts and uncertainty intervals, and use interviews or exit feedback to establish a plausible reason for the loss.
+
+| Experiment / backlog | Funnel stage it targets | Hypothesis and intervention | Evidence to collect | What would change the priority |
+| --- | --- | --- | --- | --- |
+| E1 / B1 + B6: shorter adaptive assessment | Start → valid submission | Move optional routine/preferences after the first report and branch by concern; retain the checks required before showing products. Compare with the current 10–11 question prototype. | Step-level abandonment, time, technical errors, completed suitability checks, report usefulness, purchase per starter. | Prioritise if completion is below the 80% ambition and losses cluster at optional questions while technical errors are low. If losses cluster at failed requests or slow loads, fix B5 first. If a shorter quiz lifts completion but harms suitability, useful recommendations or purchase per starter, do not ship that variant. |
+| E2 / B2: answer-linked explanation | Eligible report → deliberate plan engagement | Showing why a specific answer led to a product will make the next step understandable. Test the explanation against a concise product-list control. | Plan exposure versus explicit plan engagement, comprehension feedback, source/device mix, downstream purchase per starter. | Prioritise when deliberate engagement is materially below the scenario's 80% and users do not understand the recommendation. If engagement is healthy but checkout is weak, move effort to E3; if recommendations are unsuitable, correct matching before copy experiments. |
+| E3 / B3: essential plan, optional additions and price clarity | Plan engagement → merchant-confirmed checkout | A small starting routine with optional items and clear total/pack sizes may reduce cost uncertainty. Test against the existing plan presentation, using the same eligible SKU pool. | Merchant-confirmed checkout rate, outbound-click-to-checkout loss, item removal, price/delivery feedback, margin per starter. | Prioritise when checkout start is materially below 60%, plan engagement is healthy and cost/routine-size feedback supports the hypothesis. If the main loss is unavailable stock, prioritise inventory/substitution work rather than changing copy. Reject a variant that raises orders but worsens the agreed margin or refund guardrails. |
+| E4 / B4 + B5: checkout continuity and payment recovery | Merchant checkout → confirmed paid purchaser | Preserve selected eligible products and reduce recoverable checkout failures. Known defects are fixes, not conditions to leave broken for an A/B test. | Payment-attempt and failure reasons, device/payment-method split, duplicate orders, successful payment after retry. | Move ahead of E2/E3 if confirmed payment failures or broken redirects explain losses, even when an earlier stage has more absolute exits. If there are few technical failures and users decline the final cost, investigate pricing/trust rather than assuming payment recovery will help. |
+| E5 / new B10: expectation and fulfilment quality | Paid → retained purchaser | Accurate product expectations, confirmed availability and clear delivery information may reduce cancellations and returns. Test communication changes only after correcting service failures. | Mature paid-to-retained rate, cancellation/return reasons, delivery outcomes, complaints, contribution margin. | Prioritise if retention is materially below the scenario's 89.9%, especially with repeated expectation or fulfilment complaints. Do not scale an acquisition or checkout winner that produces more orders but fewer retained purchasers or worse customer outcomes. |
+| E6 / B8: supported clinician navigation | Submitted clinician route → completed review → appropriate paid/retained purchase | Some users need care before a product. Validate a staffed handoff and service capacity before evaluating commercial outcomes. | Route share, accepted/attended reviews, time to contact, clinical eligibility after review, attributable paid/retained outcomes. | If everyday-care eligibility is materially below 75%, recompute the overall target and move supported care navigation/traffic-fit research up. Do not relabel referred users as eligible or remove them from the all-submitter denominator. Care access and safety stay primary. |
+
+No mandatory identity-capture experiment is currently prioritised: the prototype has no phone/OTP gate. Test that lever only if research establishes such a gate in the real baseline. Avoid fake urgency, invented testimonials, unvalidated social comparisons, shame-driven copy, preselected subscriptions and bundled marketing consent.
+
+### How stage data change the backlog
+
+**First priority is measurement readiness (G3), then the observed, actionable bottleneck.** The initial RICE order is a provisional implementation sequence, not a fixed experiment roadmap. For each candidate, estimate:
+
+**Incremental retained purchases ≈ users entering the affected stage × plausible absolute improvement in that stage × observed downstream conversion.**
+
+Then compare this benefit range with confidence, implementation effort, clinical constraints and margin. Use measured downstream conversion and eligible reach when available. Do not add together experiment uplifts: interventions can overlap, change the audience mix or interact.
+
+To show why stage location matters, the following is a sensitivity calculation using only the original scenario. It assumes each stage could independently improve by ten percentage points, with every other factor and the audience held fixed. These are not uplift predictions or equally feasible interventions:
+
+| Hypothetical isolated change | Additional retained purchases per 1,000 original starters | Interpretation |
+| --- | ---: | --- |
+| Plan engagement 80% → 90% | 20.0 | 600 eligible submitters × .10 × .60 × (160/288) |
+| Checkout start 60% → 70% | 26.7 | 480 plan-engaged users × .10 × (160/288) |
+| Checkout-to-retained conversion 55.6% → 65.6% | 28.8 | 288 checkout starters × .10; the gain could come from payment or retention and must be diagnosed |
+
+This does not establish that checkout work should always rank first. A ten-point improvement might be implausible there, cost more, or have weaker supporting evidence. It shows why “the largest drop-off” is insufficient: ranking depends on recoverable loss, downstream value, cost and confidence.
+
+**Illustrative reprioritisation example, not observed data:** if deliberate plan engagement is already 85%, merchant-confirmed checkout is 40%, and cost feedback is common, move E3/B3 ahead of E2/B2. If checkout intent is strong but payment failures dominate, move E4/B4 first. If orders are paid but frequently cancelled, move E5/B10 ahead of further acquisition or checkout optimisation. If current attribution cannot distinguish these cases, G3 stays first.
+
+### Decision rules and cadence
+
+1. Establish baseline cohorts with raw numerators/denominators, uncertainty intervals and source/device/route mix. Choose the minimum useful effect, experiment size and guardrail limits before assigning traffic. Do not select thresholds after seeing results.
+2. Use one stage-specific primary metric to diagnose the intervention, with retained purchase per submitter and per starter as cross-funnel outcomes. Treat upstream wins as provisional until the purchase window and retention follow-up mature.
+3. Ship only when the agreed benefit criterion is met and suitability, customer outcomes, margin, consent and technical guardrails remain acceptable. A stage win with worse final outcomes is not a funnel win.
+4. A well-powered null result should lower the confidence/impact estimate for that hypothesis. An inconclusive result calls for more data or a different test, not a claim of success. Investigate harm or a safety incident immediately.
+5. At each weekly PM/analytics review, refresh eligible reach, downstream rates, evidence-based impact ranges and effort in the backlog. Clinical owners review routing/suitability changes; commerce/operations owners review price, checkout and fulfilment evidence. Account for the different outcome-maturity windows before reranking.
+
+The defensible claim is therefore: **we have a measurable path to test the 20% ambition, and explicit evidence that would change our approach; we do not yet have evidence that the product will achieve 20%.**
 
 ### Measurement and validation plan
 
 First run 8–12 moderated sessions across hair, skin/body, wellness and sensitive-concern users, including mobile and lower-bandwidth conditions. Validate category understanding, privacy comprehension and whether users understand that the report is not a diagnosis. This is qualitative research, not evidence of an 80% rate.
 
-Then establish baseline counts with the same denominators and source/device mix. Instrument: landing_view, assessment_cta_click, acknowledgement_continue, assessment_start, question_view, question_answered, answer_edited, submit_attempt, assessment_submitted, report_view, route_assigned, plan_view, checkout_start, payment_failed, order_paid, order_cancelled/refunded. Include pseudonymous assessment ID, experiment/variant, event ID, timestamp, step ID, technical result and rule version. Do not put raw symptom answers, cycle details or phone numbers in general-purpose analytics. Any route metadata still requires minimisation and access review.
+Then establish baseline counts with the same denominators and source/device mix. Instrument: landing_view, assessment_cta_click, acknowledgement_continue, assessment_start, question_view, question_answered, answer_edited, submit_attempt, assessment_submitted, report_view, route_assigned, plan_exposure, plan_view (explicit engagement), product_outbound_click, merchant-confirmed checkout_start, payment_attempt, payment_failed, order_paid, order_cancelled/refunded. These are proposed production events, not analytics already operating in the prototype. Include pseudonymous assessment ID, experiment/variant, event ID, timestamp, step ID, technical result and rule version. Do not put raw symptom answers, cycle details or phone numbers in general-purpose analytics. Any route metadata still requires minimisation and access review.
 
 Report completion by source, device, route, age eligibility and new/returning visitor. Separate technical drop-off from voluntary exit and appropriate care navigation. Use purchase-per-starter as a cross-funnel check so an experiment cannot improve completion by attracting unqualified submits.
 
@@ -170,7 +220,7 @@ A point estimate of 80% or 20% does not establish that the true rate is at least
 
 ## 8. Prioritised backlog
 
-**Framework:** mandatory safety/data prerequisites first, then RICE. Reach is users exposed per 1,000 assessment starters, Impact is a directional multiplier, Confidence is 0–1, Effort is estimated person-weeks. Score = Reach × Impact × Confidence / Effort. These are explicit planning estimates, to replace after baseline research; they are not measured uplift or additive benefits.
+**Framework:** mandatory safety/data prerequisites first, then RICE. Reach is users exposed per 1,000 assessment starters, Impact is a directional multiplier, Confidence is 0–1, Effort is estimated person-weeks. Score = Reach × Impact × Confidence / Effort. These are explicit planning estimates, to replace after baseline research; they are not measured uplift or additive benefits. Use the stage-specific evidence and decision rules in Section 7 to rerank this list. G3 is the first commercial-learning prerequisite: without attribution, the 20% target cannot be evaluated.
 
 ### Launch prerequisites — complete before conversion experiments
 
@@ -181,7 +231,7 @@ A point estimate of 80% or 20% does not establish that the true rate is at least
 | G3 | Metric contract and trustworthy event chain | Stable IDs, deduped accepted submits, report/order attribution, explicit purchase window, test exclusions and route breakdowns | PM + analytics + engineering |
 | G4 | Accessible, reliable mobile foundation | Back/edit, keyboard/screen-reader navigation, no blocking layout defects, recoverable submits, low-bandwidth QA; fulfilment/payment readiness before live sale | Design + engineering + QA |
 
-### RICE order after prerequisites
+### Provisional RICE order after prerequisites
 
 | Rank / ID | Backlog item | Reach | Impact | Confidence | Effort | Score | Acceptance and dependency |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | --- |
@@ -194,6 +244,8 @@ A point estimate of 80% or 20% does not establish that the true rate is at least
 | 7 / B7 | Optional report saving and consented reminders | 800 | .5 | .50 | 1.5 | 133.3 | Separate opt-in and deletion, no report access gate, privacy-safe reminder text; needs G2/B2 |
 | 8 / B8 | Clinician navigation with confirmed capacity | 200 | 1.0 | .60 | 2.0 | 60 | Real appointment/handoff status, clear availability/cost, response SLA; needs G1/G2 and clinical operations |
 | 9 / B9 | Optional second-concern continuation | 240 | .5 | .40 | 2.0 | 24 | User-triggered only; reconcile plans and repeated actives; needs reliable B1–B4 |
+
+B10 is an additional candidate for expectation/fulfilment quality, triggered by paid-to-retained evidence. Its reach, impact, confidence and effort are unscored until merchant and operations data are available; it can move ahead of the numbered items when those data justify it.
 
 RICE does not allow delaying safe navigation. The basic clinician/urgent route is mandatory in G1/B1; B8 adds an integrated, staffed booking experience. If baseline data show most users are on clinical routes, revisit this ordering immediately rather than optimising only the shopping cohort.
 
