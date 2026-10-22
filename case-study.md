@@ -42,9 +42,9 @@ Women’s context should affect suitability rather than serve as a cosmetic rebr
 
 ## 4. User flow and question design
 
-**Landing → explanation/acknowledgement → age → priority category → branch concern → duration → impact → relevant context → safety question → current routine → preference → review → submit → report.**
+**Landing → explanation/acknowledgement → age → priority category → branch concern → facial skin type (face only) → duration → impact → relevant context → safety question → product suitability → current routine → preference → review → submit → report.**
 
-There are nine questions on the usual adult path. Selecting concerning symptoms displays immediate medical-help guidance and shortens the path to seven questions, omitting routine and preference questions. Branch concern options change by category; safety wording changes for period and intimate symptoms. Back and edit preserve answers. Changing the category invalidates the previous concern answer. A short under-18 path produces an age-appropriate next-step summary rather than an adult plan. Production analytics must report this route separately so it cannot disguise poor adult-path completion.
+There are ten questions on the usual adult path and eleven for face care, which also asks skin type. Selecting concerning symptoms displays immediate medical-help guidance and shortens the path before product-fit, routine and preference questions (seven questions, or eight for face care). Branch concern options change by category; safety wording changes for period and intimate symptoms. Back and edit preserve answers. Changing the category invalidates the previous concern answer. A short under-18 path produces an age-appropriate next-step summary rather than an adult plan. Production analytics must report this route separately so it cannot disguise poor adult-path completion.
 
 The acknowledgement explains purpose and local demo handling. A production health-data consent and retention policy must be designed and reviewed before collection. Report access is not conditional on marketing consent or phone verification. An optional save/send feature would come after report value and need separate opt-in.
 
@@ -57,6 +57,8 @@ The acknowledgement explains purpose and local demo handling. A production healt
 | Daily impact | Self-reported mild/moderate/severe | Severe/disruptive routes to review; not a medical stage |
 | Life/health context | Closest match, including prefer not to say | Pregnancy, postpartum, medicines or unknown context require review |
 | Safety | None / listed symptoms / unsure | Urgent route takes precedence; uncertainty requires review |
+| Product suitability | No known issues / allergy or irritation / active or prescribed treatments / unsure | Holds product matching when suitability is uncertain |
+| Facial skin type (face only) | Oily / combination / normal / dry / sensitive / unsure | Changes the cleanser match or holds suggestions |
 | Current routine | None / occasional / consistent / irritation | Shapes explanation; irritation requires review |
 | Preference | Simple / affordable / understand / expert | Shapes next-step copy; expert choice routes to review |
 
@@ -74,7 +76,7 @@ A production context question should allow multiple relevant selections with an 
 | Period/hormonal concerns | Irregular periods, discomfort, prior PCOS diagnosis, questions | Clinician conversation; no quiz-based hormonal diagnosis |
 | Intimate comfort | Chafing, urinary symptoms, itching, private advice | Clinical advice, with prompt-care route for concerning symptoms |
 
-The prototype does not yet ask the extra questions needed for SKU-level matching, such as previous reactions, known allergies, current active ingredients or product contraindications. It therefore links only to a category catalogue for everyday-care routes. The safety question is illustrative, not validated clinical triage.
+The prototype now asks a broad product-suitability question about allergies, active irritation and current active/prescribed treatments, plus facial skin type. It uses these answers to match a curated catalogue of 17 real products. Full ingredient-level interaction and contraindication checks are still not implemented; these questions are not a substitute for clinical suitability review. The safety question is illustrative, not validated clinical triage.
 
 ## 5. Report and care-plan model
 
@@ -183,7 +185,7 @@ A point estimate of 80% or 20% does not establish that the true rate is at least
 
 | Rank / ID | Backlog item | Reach | Impact | Confidence | Effort | Score | Acceptance and dependency |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | --- |
-| 1 / B1 | Focused category flow with nine-question adult path | 1000 | 2.0 | .80 | 2.0 | 800 | Every offered category reaches a valid summary; no dead end; needs G1/G4 |
+| 1 / B1 | Focused category flow with 10–11 question adult path | 1000 | 2.0 | .80 | 2.0 | 800 | Every offered category reaches a valid summary; no dead end; needs G1/G4 |
 | 2 / B2 | Answer-linked report with honest unknowns | 800 | 2.0 | .70 | 2.0 | 560 | Every interpretation traces to an answer and approved content; needs B1/G1 |
 | 3 / B3 | Essential routine, optional additions, upfront total price | 600 | 2.0 | .65 | 1.5 | 520 | Suitable in-stock SKU mapping, no duplicate actives, no preselected recurring charge; needs B2/G1 |
 | 4 / B4 | Checkout continuity and payment recovery | 288 | 2.0 | .65 | 1.0 | 374.4 | Selected eligible routine and report attribution survive checkout; payment retries do not duplicate orders; needs B3/G3 |
@@ -232,6 +234,17 @@ Sources consulted 22 October 2026. Catalogue pages establish category coverage, 
 - Urinary symptom escalation: NHS, https://www.nhs.uk/conditions/urinary-tract-infections-utis/ — clinical-reference input only; production wording and local care pathways need clinician approval.
 - Hormonal-condition symptoms and assessment: NHS, https://www.nhs.uk/conditions/polycystic-ovary-syndrome-pcos/diagnosis/ (redirected on access) — symptoms alone do not establish diagnosis.
 
-**Implemented:** responsive landing, all seven concern routes, nine-question adult flow, under-18 exit, context/safety routing, editable review, dynamic report, print/save, category links, keyboard controls and PM case study.
+**Implemented:** responsive landing, seven concern routes, 10–11 question adult flow, under-18 exit, context/safety/product-suitability routing, editable review, dynamic report, 17-product sourced catalogue, concern/skin-type product matching, discussion-only options, optional-product price estimate, product library with filters, print/save, keyboard controls and PM case study.
 
-**Modelled only:** SKU-level eligibility, prices/plan selection, real consultations, identity/consent infrastructure, secure persistence, analytics collection, reminders and checkout. No target conversion rate has been measured.
+**Modelled only:** complete clinical eligibility and ingredient interaction checks, live stock/pricing, real consultations, identity/consent infrastructure, secure persistence, analytics collection, reminders and checkout. No target conversion rate has been measured.
+
+
+## 11. Product recommendation implementation
+
+The report now includes specific products rather than only category links. The catalogue is a snapshot checked 22 October 2026 on 17 official Bodywise product pages. Individual product pages take precedence over category listings where prices differ. Links, prices, pack sizes, relevant ingredients and matching reasons are visible on cards; the researched library is available at [Product library](products.html). No product rating, clinical success rate, guaranteed outcome or monthly cost is invented.
+
+Routine routes show one starting product with optional complementary care where appropriate. Simple/affordable preferences hide optional additions. An optional checkbox changes the pack-price estimate; it does not create a cart or subscription. Users purchase only by navigating to the official store. Shipping, discounts, stock and full suitability require confirmation there.
+
+The oily-skin occasional-breakout path selects the 2% face wash, while combination skin selects the 1% option. Dry/normal skin prioritises moisturising rather than assuming an acid cleanser is suitable; sensitive/uncertain skin needs individual review. Current acids, retinoids, prescribed treatments, ingredient allergies or irritation hold automatic suggestions. Supplement and hair/scalp treatment paths can show clearly labelled options for a clinician conversation on otherwise unrestricted paths. Pregnancy, breastfeeding/postpartum, medical/medicine context, uncertain safety, severe symptoms, under-18, periods and intimate-care routes hold product suggestions.
+
+Product photos remain brand assets linked from its image host. Prices are dated snapshots rather than live feeds. Before production, replace the snapshot with maintained catalogue/stock data, complete clinical rules, review the wording and instrument outbound clicks and purchase attribution appropriately.
