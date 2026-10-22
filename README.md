@@ -37,3 +37,7 @@ The 80% completion and 20% seven-day attributed-purchase targets remain hypothes
 ## Personalised care kits
 
 After an eligible routine report, users choose an essential starter or an optional care pair, then review product roles, label-based routine steps and exact pack-price totals. Nothing is preselected. `kits.js` and `kits.css` implement this step (`dist/` locally). Consultation-led, urgent, minor and uncertain-suitability paths do not receive shopping kits. The official Bodywise kit-builder handoff is manual and does not prefill a cart. No subscription, included doctor, tests or one-box delivery is promised. Conversion uplift remains an experiment hypothesis; seven-day purchase attribution starts at the original assessment submission.
+
+## Customer product reviews
+
+Kit selection and kit review show short, sourced review excerpts for the exact included product IDs when available. `reviews.js` contains a dated snapshot of customer reviews published on official Bodywise product pages: displayed reviewer name, date, individual rating and source link. No fabricated reviews, verified-buyer badges, kit ratings or assessment testimonials are used. Unsupported products have no substitute review. Excerpts are selected rather than representative, and individual experiences do not establish suitability. Review placement is a conversion hypothesis, not measured uplift. Local validation additionally runs `review.test.cjs` against saved official source records.
