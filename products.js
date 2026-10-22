@@ -63,7 +63,6 @@ function shortlist(a){
  }
  if(!entries.length)return held('No verified product match is available for these answers. Your care summary is still useful without a product.');
  if(discussion)entries=entries.map(p=>({...p,role:'Discuss first'}));
- if(a.preference==='Keep it affordable'||a.preference==='Keep it simple')entries=entries.filter(p=>p.role!=='Optional');
  return {status:discussion?'discussion':'recommended',message:discussion?'These are relevant catalogue options to discuss before use, not a prescription or a cleared treatment plan.':'A small product shortlist matched to your concern, context and preferences. Check the complete label before use.',products:entries,baseTotal:discussion?0:entries.filter(p=>p.role!=='Optional').reduce((s,p)=>s+p.price,0)};
 }
 const api={products,checked,shortlist};if(typeof module!=='undefined')module.exports=api;root.BodywiseProducts=api;

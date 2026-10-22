@@ -28,7 +28,7 @@ Routine suggestions require an adult path, no concerning safety answer, no relev
 
 Pregnancy, breastfeeding/postpartum, medicines/conditions, unclear safety or suitability, severe symptoms, under-18, periods and intimate-care paths do not receive an automatic product list. Hair/scalp treatment options and oral supplements are discussion-only on otherwise eligible paths. No minoxidil, finasteride, oral hormone treatment or automatic deficiency diagnosis is generated.
 
-Simple/affordable preferences omit optional additions. Other routine paths start with one core product and an optional complement where relevant. Existing products need not be replaced. The total is a sum of displayed pack prices, not a monthly plan, cart or bundled offer.
+All routine preferences retain relevant optional recommendations, clearly labelled and excluded from the starting estimate until selected. A simple or affordable preference does not hide these choices. Existing products need not be replaced. The total is a sum of displayed pack prices, not a monthly plan, cart or bundled offer.
 
 ## UI and maintenance
 
